@@ -25,7 +25,19 @@ SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-c!(ib@c9n7n^*e0txtq*@esmvf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "1") == "1"
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "pharmacy-production-72c4.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://pharmacy-production-72c4.up.railway.app",
+]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
