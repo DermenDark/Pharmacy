@@ -11,6 +11,6 @@ COPY . .
 EXPOSE 8000
 
 CMD python manage.py migrate && \
-    python manage.py loaddata fixtures/pharmacy_fixtures_final.json && \
+    python manage.py loaddata pharmacy_fixtures_final.json && \
     python manage.py collectstatic --noinput && \
     gunicorn PharmacyApp.wsgi:application --bind 0.0.0.0:$PORT
