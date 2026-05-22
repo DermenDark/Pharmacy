@@ -73,7 +73,9 @@ def about_company_create(request):
 def about_company_edit(request, pk):
     obj = get_object_or_404(AboutCompany, pk=pk)
     logger.info("Открыта форма редактирования AboutCompany id=%s пользователем %s", pk, request.user)
-
+    logger.info(obj.logo)
+    logger.info(obj.logo.name)
+    logger.info(obj.logo.url)
     return _save_form_view(
         request,
         AboutCompanyForm,
