@@ -11,7 +11,6 @@ from .models import AboutCompany, News, Review, Term
 
 logger = logging.getLogger("info")
 
-
 def index(request):
     logger.info("Открыта главная страница пользователем %s", request.user)
 
