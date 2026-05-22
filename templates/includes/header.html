@@ -132,13 +132,9 @@
                     <button type="submit">Войти</button>
                 </form>
                 <form method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="action" value="register">
-                    <input type="hidden" name="next" value="{{ request.GET.next|default:'about_company' }}">
-
-                    {{ register_form.as_p }}
-
-                    <button type="submit">Зарегистрироваться</button>
+                <form action="{% url 'register_view' %}" method="get" style="display:inline;">
+                    <button type="submit">регистрация</button>
+                </form>
                 </form>
             {% endif %}
         </nav>
