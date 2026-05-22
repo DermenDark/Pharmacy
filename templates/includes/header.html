@@ -128,14 +128,8 @@
                     <button type="submit">Выйти</button>
                 </form>
             {% else %}
-                <form action="{% url 'login_view' %}" method="get" style="display:inline;">
-                    <button type="submit">Войти</button>
-                </form>
-                <form method="post">
-                <form action="{% url 'register_view' %}" method="get" style="display:inline;">
-                    <button type="submit">регистрация</button>
-                </form>
-                </form>
+                <a href="{% url 'login_view' %}">Войти</a>
+                <a href="{% url 'register_view' %}">Регистрация</a>
             {% endif %}
         </nav>
         <h1></h1>
