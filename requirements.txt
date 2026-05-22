@@ -6,6 +6,4 @@ gunicorn>=22,<23
 Pillow==11.2.1
 pytest>=8,<9
 pytest-django>=4.9,<5
-gunicorn
-psycopg2-binary
-whitenoise
+whitenoise>=6,<7
