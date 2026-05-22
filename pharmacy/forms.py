@@ -293,7 +293,6 @@ class CouponsForm(forms.ModelForm):
         model = Coupons
         fields = "__all__"
         labels = {
-            "code": "Код купона",
             "discount_cost": "Сумма скидки",
             "discount_percent": "Процент скидки",
             "is_active": "Активен",
@@ -303,7 +302,6 @@ class CouponsForm(forms.ModelForm):
             "used_count": "Использовано",
         }
         widgets = {
-            "code": forms.TextInput(attrs={"placeholder": "SALE10"}),
             "discount_cost": forms.NumberInput(attrs={"step": "0.01", "min": "0"}),
             "discount_percent": forms.NumberInput(attrs={"min": "0", "max": "100"}),
             "valid_from": DateTimeLocalInput(),

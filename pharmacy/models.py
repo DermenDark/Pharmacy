@@ -167,6 +167,38 @@ class Supplier(models.Model):
         return self.name
 
 
+class Sale(models.Model):
+    order = models.OneToOneField(
+        "shop.Order",
+        on_delete=models.CASCADE,
+        related_name="sale",
+        verbose_name="Заказ",
+    )
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name="sales")
+    total_cost = models.DecimalField(max_digits=10, decimal_places=2)
+    made = models.BooleanField(default=False)
+    sale_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Sale #{self.id}"
+
+
+class SaleItem(models.Model):
+    sale = models.ForeignKey(Sale, on_delete=models.CASCADE, related_name="items")
+    medication = models.ForeignKey(
+        Medication,
+        on_delete=models.CASCADE,
+        related_name="sale_items",
+    )
+    count = models.PositiveIntegerField()
+
+    class Meta:
+        unique_together = ("sale", "medication")
+
+    def __str__(self):
+        return f"{self.medication.name} x {self.count}"
+
+
 class Benefits(models.Model):
     """Льготы"""
     name = models.CharField(max_length=100)
@@ -189,7 +221,6 @@ class Benefits(models.Model):
 
 class Coupons(models.Model):
     """Купоны"""
-    code = models.CharField(max_length=32)
     discount_cost = models.DecimalField(max_digits=10, decimal_places=2)
     discount_percent = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(100)]
@@ -201,36 +232,9 @@ class Coupons(models.Model):
     used_count = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return f"{self.code} — {self.discount_percent}% / {self.discount_cost}"
-
-class Sale(models.Model):
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
-    sale_date = models.DateTimeField(auto_now_add=True)
-    total_cost = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    discount_total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    coupons = models.ManyToManyField(Coupons, blank=True, related_name="sales")
-    discount_total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    made = models.BooleanField(default=False)
-
-    def __str__(self):
-        return f"Sale #{self.id}"
+        return f"{self.discount_percent}% - {self.discount_cost}"
 
 
-class SaleItem(models.Model):
-    sale = models.ForeignKey(Sale, on_delete=models.CASCADE, related_name="items")
-    medication = models.ForeignKey(
-        Medication,
-        on_delete=models.CASCADE,
-        related_name="sale_items",
-    )
-    count = models.PositiveIntegerField()
-
-    class Meta:
-        unique_together = ("sale", "medication")
-
-    def __str__(self):
-        return f"{self.medication.name} x {self.count}"
-    
 class Vacancy(models.Model):
     """Вакансии"""
     title = models.CharField(max_length=200, verbose_name="Название вакансии")

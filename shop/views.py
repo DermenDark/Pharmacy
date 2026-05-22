@@ -1,20 +1,16 @@
-from datetime import timezone
 import logging
-from decimal import Decimal
 
-from django.db.models import F
-from .form import CheckoutForm
-from pharmacy.models import Medication, Sale, SaleItem, Coupons
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
 from django.db import transaction
+from django.http import HttpResponseNotAllowed
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_POST
 
 from pharmacy.models import Medication, UserProfile
 from shop.services import approve_order_to_sale
 
-from .models import Cart, CartItem, Order
+from .models import Cart, CartItem, Order, OrderItem
 
 logger = logging.getLogger("shop")
 
@@ -124,89 +120,44 @@ def cart_item_delete(request, item_id):
 
 
 @login_required(login_url="login_view")
+@transaction.atomic
 def checkout(request):
-    cart_items = request.session.get("cart", {})
-    form = CheckoutForm(request.POST or None)
+    logger.info("Попытка оформить заказ пользователем %s", request.user)
 
-    if not cart_items:
-        return render(request, "shop/checkout.html", {
-            "form": form,
-            "cart_items": {},
-            "error": "Корзина пуста.",
-        })
+    cart, _ = Cart.objects.get_or_create(user=request.user)
+    items = cart.items.select_related("medication").all()
 
-    if request.method == "POST" and form.is_valid():
-        selected_coupons = form.cleaned_data["coupons"]
+    if not items.exists():
+        messages.info(request, "Корзина пуста.")
+        return redirect("shop:cart")
 
-        medication_ids = list(cart_items.keys())
-        medications = Medication.objects.filter(id__in=medication_ids)
+    for item in items:
+        if item.quantity > item.medication.count:
+            messages.error(request, f"Недостаточно товара: {item.medication.name}")
+            return redirect("shop:cart")
 
-        items = []
-        subtotal = Decimal("0.00")
+    order = Order.objects.create(
+        user=request.user,
+        total_cost=cart.total_cost,
+        status=Order.Status.NEW,
+    )
 
-        for medic in medications:
-            qty = int(cart_items[str(medic.id)])
-            line_total = medic.cost * qty
-            subtotal += line_total
-            items.append((medic, qty, line_total))
+    for item in items:
+        OrderItem.objects.create(
+            order=order,
+            medication=item.medication,
+            quantity=item.quantity,
+            price=item.medication.cost,
+        )
 
-        now = timezone.now()
-        discount_total = Decimal("0.00")
-        valid_coupons = []
+        item.medication.count -= item.quantity
+        item.medication.save()
 
-        for coupon in selected_coupons:
-            if not coupon.is_active:
-                continue
-            if coupon.valid_from and coupon.valid_from > now:
-                continue
-            if coupon.valid_to and coupon.valid_to < now:
-                continue
-            if coupon.usage_limit is not None and coupon.used_count >= coupon.usage_limit:
-                continue
-            valid_coupons.append(coupon)
+    items.delete()
 
-        for coupon in valid_coupons:
-            if coupon.discount_cost:
-                discount_total += coupon.discount_cost
+    messages.success(request, f"Заказ #{order.id} успешно оформлен.")
+    return redirect("shop:profile")
 
-            if coupon.discount_percent:
-                discount_total += (subtotal * Decimal(coupon.discount_percent) / Decimal("100"))
-
-        if discount_total > subtotal:
-            discount_total = subtotal
-
-        final_total = subtotal - discount_total
-
-        with transaction.atomic():
-            # ВАЖНО: тут подставь свою связь с сотрудником/кассиром
-            sale = Sale.objects.create(
-                employee=request.user.employeeaccount.employee,
-                total_cost=final_total,
-                discount_total=discount_total,
-            )
-
-            for medic, qty, line_total in items:
-                SaleItem.objects.create(
-                    sale=sale,
-                    medication=medic,
-                    quantity=qty,
-                    price=medic.cost,
-                )
-
-            sale.coupons.set(valid_coupons)
-
-            Coupons.objects.filter(pk__in=[c.pk for c in valid_coupons]).update(
-                used_count=F("used_count") + 1
-            )
-
-        request.session["cart"] = {}
-        logger.info("Покупка оформлена пользователем %s", request.user)
-        return redirect("sale_detail", pk=sale.pk)
-
-    return render(request, "shop/checkout.html", {
-        "form": form,
-        "cart_items": cart_items,
-    })
 
 @login_required(login_url="login_view")
 @permission_required("shop.view_order", raise_exception=True)
