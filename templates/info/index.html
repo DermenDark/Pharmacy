@@ -3,6 +3,11 @@
 
 {% block content %}
 <div>
+    {% if company.logo %}
+        <div>
+            <img src="{{ company.logo.url }}" alt="Логотип" style="max-width: 120px;">
+        </div>
+    {% endif %}
     <h1>Главная страница</h1>
     {% if request.user.is_authenticated %}
             <section style="margin-top: 20px;">
@@ -48,12 +53,6 @@
 
             {% if company.video_url %}
                 <p><a href="{{ company.video_url }}" target="_blank">Смотреть видео</a></p>
-            {% endif %}
-
-            {% if company.logo %}
-                <div>
-                    <img src="{{ company.logo.url }}" alt="Логотип" style="max-width: 120px;">
-                </div>
             {% endif %}
 
             {% if company.history %}
