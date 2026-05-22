@@ -39,6 +39,9 @@
     {% for info in all_info %}
         <div style="border:1px solid #ccc; padding:12px; margin-bottom:12px;">
             <div><b>Название:</b> {{ info.name }}</div>
+            {% if info.photo %}
+                <img src="{{ info.photo.url }}" alt="{{ info.name }}" style="max-width:100px;">
+            {% endif %}
             <div><b>Категория:</b> {{ info.category.name }}</div>
             <div><b>Цена:</b> {{ info.cost }}</div>
 

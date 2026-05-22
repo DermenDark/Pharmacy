@@ -68,6 +68,7 @@ def create_medication(request):
             description=request.POST.get("description"),
             cost=request.POST.get("cost"),
             count=request.POST.get("count"),
+            photo=request.FILES.get("photo"),
         )
         logger.info("Создан медикамент пользователем %s", request.user)
         return redirect("catalog")
@@ -88,6 +89,10 @@ def edit_medication(request, pk):
         medic.description = request.POST.get("description")
         medic.cost = request.POST.get("cost")
         medic.count = request.POST.get("count")
+
+        if request.FILES.get("photo"):
+            medic.photo = request.FILES.get("photo")
+
         medic.save()
         logger.info("Изменен медикамент id=%s пользователем %s", pk, request.user)
         return redirect("catalog")

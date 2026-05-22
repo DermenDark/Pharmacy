@@ -8,11 +8,12 @@
 <body>
     <h1>Добавить медикамент</h1>
 
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
         <input type="text" name="name" placeholder="Название" required>
         <br><br>
+        <input type="file" name="photo" accept="image/*">
 
         <select name="category" required>
             <option value="">Категория</option>

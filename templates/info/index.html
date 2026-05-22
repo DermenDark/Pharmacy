@@ -80,5 +80,40 @@
             <a href="{% url 'about_company_delete' company.id %}">Удалить</a>
         </p>
     {% endif %}
+    {% if today %}
+        <section style="margin-top: 30px;">
+        <h2>Календарь</h2>
+        <p><b>{{ month_name }} {{ today.year }}</b></p>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; text-align: center;">
+            <thead>
+                <tr>
+                    {% for day in weekday_names %}
+                        <th>{{ day }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for week in month_matrix %}
+                    <tr>
+                        {% for day in week %}
+                            <td>
+                                {% if day %}
+                                    {% if day == today.day %}
+                                        <strong>{{ day }}</strong>
+                                    {% else %}
+                                        {{ day }}
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p style="margin-top: 10px;">Сегодня: {{ today|date:"d.m.Y" }}</p>
+        </section>
+    {% endif %}
 </div>
 {% endblock %}

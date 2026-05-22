@@ -147,6 +147,12 @@ class Medication(models.Model):
     description = models.TextField()
     cost = models.DecimalField(max_digits=10, decimal_places=2)
     count = models.PositiveIntegerField()
+    photo = models.ImageField(
+        upload_to="medications/photos/",
+        blank=True,
+        null=True,
+        verbose_name="Фотография",
+    )
 
     def __str__(self):
         return self.name

@@ -1,5 +1,7 @@
 import logging
 
+import calendar
+from datetime import date
 import requests
 from django.shortcuts import get_object_or_404, render
 
@@ -61,12 +63,20 @@ def index(request):
             api_error = "Ошибка подключения к API"
             logger.error("Ошибка API-Ninjas: %s", exc)
 
+    today = date.today()
+    month_matrix = calendar.monthcalendar(today.year, today.month)
+    month_name = calendar.month_name[today.month]
+    weekday_names = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
     return render(request, "info/index.html", {
         "company": company,
         "latest_news": latest_news,
         "weather": weather,
         "api_error": api_error,
         "history_day2": history_fact2,
+        "today": today,
+        "month_matrix": month_matrix,
+        "month_name": month_name,
+        "weekday_names": weekday_names,
     })
 
 
