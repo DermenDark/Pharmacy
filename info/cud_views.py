@@ -2,6 +2,7 @@ import logging
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, permission_required
+from django.conf import settings
 
 from .models import AboutCompany, News, Review, Term
 from .forms import AboutCompanyForm, NewsForm, ReviewForm, TermForm
@@ -76,6 +77,12 @@ def about_company_edit(request, pk):
     logger.info(obj.logo)
     logger.info(obj.logo.name)
     logger.info(obj.logo.url)
+    import os
+    logger.info("MEDIA_ROOT=%s", settings.MEDIA_ROOT)
+    logger.info("exists=%s", os.path.exists(settings.MEDIA_ROOT))
+    logger.info("logo.path=%s", obj.logo.path)
+    logger.info("logo exists=%s", os.path.exists(obj.logo.path))
+
     return _save_form_view(
         request,
         AboutCompanyForm,
