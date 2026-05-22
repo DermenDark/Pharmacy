@@ -1,6 +1,7 @@
 import logging
 
 import calendar
+from django.utils import timezone
 from datetime import date
 import requests
 from django.shortcuts import get_object_or_404, render
@@ -67,6 +68,8 @@ def index(request):
     month_matrix = calendar.monthcalendar(today.year, today.month)
     month_name = calendar.month_name[today.month]
     weekday_names = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+    server_now = timezone.localtime(timezone.now())
+    server_tz_name = timezone.get_current_timezone_name()
     return render(request, "info/index.html", {
         "company": company,
         "latest_news": latest_news,
@@ -77,6 +80,8 @@ def index(request):
         "month_matrix": month_matrix,
         "month_name": month_name,
         "weekday_names": weekday_names,
+        "server_now": server_now,
+        "server_tz_name": server_tz_name,
     })
 
 
