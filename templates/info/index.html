@@ -115,5 +115,40 @@
         <p style="margin-top: 10px;">Сегодня: {{ today|date:"d.m.Y" }}</p>
         </section>
     {% endif %}
+    {% if server_now %}
+    <section style="margin-top: 30px;">
+        <h2>Часовые пояса</h2>
+
+        <p>
+            <b>Сервер:</b>
+            {{ server_now|date:"d.m.Y H:i:s" }}
+            ({{ server_tz_name }})
+        </p>
+
+        <p>
+            <b>Клиент:</b>
+            <span id="client-timezone">определяется...</span>
+        </p>
+
+        <p>
+            <b>Время клиента:</b>
+            <span id="client-now">определяется...</span>
+        </p>
+    </section>
+
+    <script>
+        (function () {
+            const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'не удалось определить';
+            document.getElementById('client-timezone').textContent = tz;
+
+            const now = new Date();
+            document.getElementById('client-now').textContent =
+                new Intl.DateTimeFormat('ru-RU', {
+                    dateStyle: 'medium',
+                    timeStyle: 'medium'
+                }).format(now);
+        })();
+    </script>
+{% endif %}
 </div>
 {% endblock %}

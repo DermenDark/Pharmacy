@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Оформление заказа{% endblock %}
+
+{% block content %}
+
+<h1>Оформление заказа</h1>
+
+{% if error %}
+    <p>{{ error }}</p>
+{% endif %}
+
+<h2>Товары</h2>
+
+{% for id, qty in cart_items.items %}
+    <div>
+        Товар ID: {{ id }} | Количество: {{ qty }}
+    </div>
+{% endfor %}
+
+<form method="post">
+    {% csrf_token %}
+
+    <h3>Купоны</h3>
+
+    {{ form.coupons }}
+
+    <br><br>
+
+    <button type="submit">Оформить покупку</button>
+</form>
+
+{% endblock %}
