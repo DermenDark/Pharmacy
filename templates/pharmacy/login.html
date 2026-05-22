@@ -3,7 +3,7 @@
 
 {% block content %}
 <div>
-    <h1>Вход / Регистрация</h1>
+    <h1>Вход</h1>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
         <form method="post">
@@ -12,14 +12,6 @@
             <input type="hidden" name="next" value="{{ next }}">
             {{ login_form.as_p }}
             <button type="submit">Войти</button>
-        </form>
-
-        <form method="post">
-            {% csrf_token %}
-            <input type="hidden" name="action" value="register">
-            <input type="hidden" name="next" value="{{ next }}">
-            {{ register_form.as_p }}
-            <button type="submit">Зарегистрироваться</button>
         </form>
     </div>
 </div>

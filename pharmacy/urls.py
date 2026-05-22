@@ -59,5 +59,6 @@ urlpatterns = [
     re_path(r'^promo/$', views.promo, name='promo'),
     re_path(r'^vacancies/$', views.vacancies, name='vacancies'),
     re_path(r'^login/$', views.login_view, name='login_view'),
+    re_path(r'^register/$', views.register_view, name='register_view'),
     re_path(r'^shop/', include('shop.urls')),
 ]

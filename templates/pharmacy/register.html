@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h1>Регистрация</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% if register_form.non_field_errors %}
+            <div style="color: red;">
+                {{ register_form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <input type="hidden" name="next" value="{{ request.GET.next|default:'about_company' }}">
+
+        <p>
+            {{ register_form.username.label_tag }}<br>
+            {{ register_form.username }}
+            {{ register_form.username.errors }}
+        </p>
+
+        <p>
+            {{ register_form.password1.label_tag }}<br>
+            {{ register_form.password1 }}
+            {{ register_form.password1.errors }}
+        </p>
+
+        <p>
+            {{ register_form.password2.label_tag }}<br>
+            {{ register_form.password2 }}
+            {{ register_form.password2.errors }}
+        </p>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <p>
+        Уже есть аккаунт?
+        <a href="{% url 'login' %}">Войти</a>
+    </p>
+</body>
+</html>

@@ -138,32 +138,46 @@ def contacts(request):
 
 def login_view(request):
     login_form = AuthenticationForm(request, data=request.POST or None)
+
+    if request.method == "POST":
+        next_url = request.POST.get("next") or "about_company"
+
+        if login_form.is_valid():
+            user = login_form.get_user()
+            auth_login(request, user)
+            logger.info("Успешный вход пользователя %s", user)
+            return redirect(next_url)
+
+        logger.warning("Ошибка формы входа у пользователя %s", request.user)
+
+    logger.info("Открыта страница входа пользователем %s", request.user)
+    return render(request, "pharmacy/login.html", {
+        "login_form": login_form,
+    })
+
+
+def register_view(request):
     register_form = RegisterForm(request.POST or None)
 
     if request.method == "POST":
-        action = request.POST.get("action")
         next_url = request.POST.get("next") or "about_company"
-        if action == "login":
-            if login_form.is_valid():
-                user = login_form.get_user()
-                auth_login(request, user)
-                logger.info("Успешный вход пользователя %s", user)
-                return redirect(next_url)
-            logger.warning("Ошибка формы входа у пользователя %s", request.user)
 
-        if action == "register":
-            if register_form.is_valid():
-                user = register_form.save()
-                group, _ = Group.objects.get_or_create(name='clients')
-                user.groups.add(group)
-                auth_login(request, user)
-                logger.info("Успешная регистрация пользователя %s", user)
-                return redirect(next_url)
-            logger.warning("Ошибка формы регистрации у пользователя %s: %s", request.user, register_form.errors)
+        if register_form.is_valid():
+            user = register_form.save()
+            group, _ = Group.objects.get_or_create(name="clients")
+            user.groups.add(group)
+            auth_login(request, user)
+            logger.info("Успешная регистрация пользователя %s", user)
+            return redirect(next_url)
 
-    logger.info("Открыта страница входа/регистрации пользователем %s", request.user)
-    return render(request, "pharmacy/login.html", {
-        "login_form": login_form,
+        logger.warning(
+            "Ошибка формы регистрации у пользователя %s: %s",
+            request.user,
+            register_form.errors
+        )
+
+    logger.info("Открыта страница регистрации пользователем %s", request.user)
+    return render(request, "pharmacy/register.html", {
         "register_form": register_form,
     })
 
