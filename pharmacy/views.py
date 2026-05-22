@@ -158,19 +158,19 @@ def login_view(request):
 
 def register_view(request):
     register_form = RegisterForm(request.POST or None)
-    action = request.POST.get("action")
+    
     if request.method == "POST":
         next_url = request.POST.get("next") or "about_company"
-
-    if action == "register":
-            if register_form.is_valid():
-                user = register_form.save()
-                group, _ = Group.objects.get_or_create(name='clients')
-                user.groups.add(group)
-                auth_login(request, user)
-                logger.info("Успешная регистрация пользователя %s", user)
-                return redirect(next_url)
-            logger.warning("Ошибка формы регистрации у пользователя %s: %s", request.user, register_form.errors)
+        action = request.POST.get("action")
+        if action == "register":
+                if register_form.is_valid():
+                    user = register_form.save()
+                    group, _ = Group.objects.get_or_create(name='clients')
+                    user.groups.add(group)
+                    auth_login(request, user)
+                    logger.info("Успешная регистрация пользователя %s", user)
+                    return redirect(next_url)
+                logger.warning("Ошибка формы регистрации у пользователя %s: %s", request.user, register_form.errors)
 
     logger.info("Открыта страница регистрации пользователем %s", request.user)
     return render(request, "pharmacy/register.html", {
