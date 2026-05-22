@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Купоны{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Купоны</h1>
+
+    <form method="get">
+        <select name="is_active">
+            <option value="">Все</option>
+            <option value="1">Активные</option>
+            <option value="0">Неактивные</option>
+        </select>
+
+        <input type="number" name="min_percent" placeholder="Процент от">
+        <input type="number" name="max_percent" placeholder="Процент до">
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_coupons %}
+        <a href="{% url 'coupons_create' %}">Создать купон</a>
+    {% endif %}
+
+    {% for coupon in coupons %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>Скидка:</b> {{ coupon.discount_percent }}%
+            </div>
+
+            <div>
+                <b>Сумма скидки:</b> {{ coupon.discount_cost }}
+            </div>
+
+            <div>
+                {% if coupon.is_active %}
+                    <b>Активен</b>
+                {% else %}
+                    <b>Неактивен</b>
+                {% endif %}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_coupons %}
+                    <a href="{% url 'coupons_edit' coupon.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_coupons %}
+                    <a href="{% url 'coupons_delete' coupon.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет купонов.</div>
+    {% endfor %}
+</div>
+{% endblock %}

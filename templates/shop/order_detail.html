@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Заказ #{{ order.id }}{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Заказ #{{ order.id }}</h1>
+
+    <section>
+        <p><strong>Пользователь:</strong> {{ order.user.username }}</p>
+        <p><strong>Дата:</strong> {{ order.created_at }}</p>
+        <p><strong>Сумма:</strong> {{ order.total_cost }}</p>
+        <p><strong>Статус:</strong> {{ order.get_status_display }}</p>
+    </section>
+
+    <section>
+        <h2>Состав заказа</h2>
+
+        {% if order.items.all %}
+            <ul>
+                {% for item in order.items.all %}
+                    <li>
+                        {{ item.medication.name }} — {{ item.quantity }} шт. × {{ item.price }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Позиции отсутствуют.</p>
+        {% endif %}
+    </section>
+
+    <section>
+        <p>
+            <a href="{% url 'shop:order_history' %}">К списку заказов</a>
+        </p>
+
+        {% if is_employee and order.status == "new" %}
+            <form method="post" action="{% url 'shop:approve_order' order.id %}">
+                {% csrf_token %}
+                <button type="submit">Одобрить</button>
+            </form>
+        {% endif %}
+
+        {% if order.status == "new" and order.user_id == request.user.id %}
+            <form method="post" action="{% url 'shop:cancel_order' order.id %}">
+                {% csrf_token %}
+                <button type="submit">Отменить</button>
+            </form>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Профиль пользователя</h1>
+
+    <section>
+        <h2>Данные профиля</h2>
+        <p><strong>Логин:</strong> {{ profile_user.username }}</p>
+        <p><strong>Имя:</strong> {{ user_profile.name }}</p>
+        <p><strong>Дата рождения:</strong> {{ user_profile.birth_date|default:"—" }}</p>
+        <p><strong>Телефон:</strong> {{ user_profile.phone|default:"—" }}</p>
+    </section>
+
+    <section>
+        <h2>Корзина</h2>
+        <p><strong>Сумма:</strong> {{ cart.total_cost }}</p>
+
+        {% if cart_items %}
+            <ul>
+                {% for item in cart_items %}
+                    <li>
+                        {{ item.medication.name }} — {{ item.quantity }} шт.
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Корзина пуста.</p>
+        {% endif %}
+    </section>
+
+    <section>
+        <h2>Последние заказы</h2>
+
+        {% if orders %}
+            <ul>
+                {% for order in orders %}
+                    <li>
+                        <a href="{% url 'shop:order_detail' order.id %}">Заказ #{{ order.id }}</a>
+                        — {{ order.get_status_display }}
+                        — {{ order.total_cost }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Заказов пока нет.</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

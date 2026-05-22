@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Льготы{% endblock %}
+
+{% block content %}
+    <h1>Льготы</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по названию..." class="input">
+
+        <input type="number" name="min_age" placeholder="Мин. возраст">
+
+        <label>
+            <input type="checkbox" name="is_pensioner" value="1">
+            Для пенсионеров
+        </label>
+
+        <label>
+            <input type="checkbox" name="is_disability" value="1">
+            Для инвалидности
+        </label>
+
+        <select name="is_active">
+            <option value="">Все</option>
+            <option value="1">Активные</option>
+            <option value="0">Неактивные</option>
+        </select>
+
+        <button type="submit">Поиск</button>
+    </form>
+
+{% if perms.pharmacy.add_benefits %}
+    <a href="{% url 'benefits_create' %}">Создать</a>
+{% endif %}
+
+{% for b in benefits %}
+    <div>
+        <h3>{{ b.name }}</h3>
+
+        <p>Скидка: {{ b.discount_percent }}%</p>
+        <p>Фиксированная скидка: {{ b.discount_cost }}</p>
+
+        <p>
+            Статус:
+            {% if b.is_active %}
+                Активна
+            {% else %}
+                Неактивна
+            {% endif %}
+        </p>
+
+        <div>
+            {% if perms.pharmacy.change_benefits %}
+                <a href="{% url 'benefits_edit' b.id %}">Редактировать</a>
+            {% endif %}
+
+            {% if perms.pharmacy.delete_benefits %}
+                <a href="{% url 'benefits_delete' b.id %}">Удалить</a>
+            {% endif %}
+        </div>
+    </div>
+{% empty %}
+    <p>Льгот нет</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Вакансии{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Вакансии</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по названию..." class="input">
+
+        <select name="is_active">
+            <option value="">Все</option>
+            <option value="1">Активные</option>
+            <option value="0">Неактивные</option>
+        </select>
+
+        <input type="date" name="date_from">
+        <input type="date" name="date_to">
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_vacancy %}
+        <a href="{% url 'vacancy_create' %}">Создать вакансию</a>
+    {% endif %}
+
+    {% for vacancy in vacancies %}
+        <div style="margin-top: 5px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>Название:</b> {{ vacancy.title }}
+            </div>
+
+            <div>
+                <b>Описание:</b> {{ vacancy.description }}
+            </div>
+
+            <div>
+                <b>Дата:</b> {{ vacancy.created_at }}
+            </div>
+
+            <div>
+                {% if vacancy.is_active %}
+                    <b>Активна</b>
+                {% else %}
+                    <b>Неактивна</b>
+                {% endif %}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_vacancy %}
+                    <a href="{% url 'vacancy_edit' vacancy.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_vacancy %}
+                    <a href="{% url 'vacancy_delete' vacancy.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет вакансий.</div>
+    {% endfor %}
+</div>
+{% endblock %}

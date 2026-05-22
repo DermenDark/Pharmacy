@@ -1,0 +1,2490 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "user01",
+      "first_name": "Анна",
+      "last_name": "Иванова",
+      "email": "anna.ivanova@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user02",
+      "first_name": "Михаил",
+      "last_name": "Петров",
+      "email": "mikhail.petrov@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user03",
+      "first_name": "Елена",
+      "last_name": "Смирнова",
+      "email": "elena.smirnova@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user04",
+      "first_name": "Дмитрий",
+      "last_name": "Козлов",
+      "email": "dmitry.kozlov@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user05",
+      "first_name": "Ольга",
+      "last_name": "Новикова",
+      "email": "olga.novikova@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user06",
+      "first_name": "Сергей",
+      "last_name": "Волков",
+      "email": "sergey.volkov@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user07",
+      "first_name": "Наталья",
+      "last_name": "Орлова",
+      "email": "natalia.orlova@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user08",
+      "first_name": "Ирина",
+      "last_name": "Белова",
+      "email": "irina.belova@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user09",
+      "first_name": "Павел",
+      "last_name": "Зимин",
+      "email": "pavel.zimin@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$fixture$fixturepasswordhash",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user10",
+      "first_name": "Марина",
+      "last_name": "Алексеева",
+      "email": "marina.alekseeva@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 1,
+    "fields": {
+      "name": "Профиль 1",
+      "user": 1,
+      "birth_date": "1992-02-14",
+      "phone": "+375 (29) 101-11-21",
+      "created_at": "2026-01-01T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 2,
+    "fields": {
+      "name": "Профиль 2",
+      "user": 2,
+      "birth_date": "1988-07-20",
+      "phone": "+375 (29) 102-12-22",
+      "created_at": "2026-01-02T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 3,
+    "fields": {
+      "name": "Профиль 3",
+      "user": 3,
+      "birth_date": "1995-11-03",
+      "phone": "+375 (29) 103-13-23",
+      "created_at": "2026-01-03T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 4,
+    "fields": {
+      "name": "Профиль 4",
+      "user": 4,
+      "birth_date": "1990-05-17",
+      "phone": "+375 (29) 104-14-24",
+      "created_at": "2026-01-04T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 5,
+    "fields": {
+      "name": "Профиль 5",
+      "user": 5,
+      "birth_date": "1985-09-01",
+      "phone": "+375 (29) 105-15-25",
+      "created_at": "2026-01-05T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 6,
+    "fields": {
+      "name": "Профиль 6",
+      "user": 6,
+      "birth_date": "1993-12-12",
+      "phone": "+375 (29) 106-16-26",
+      "created_at": "2026-01-06T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 7,
+    "fields": {
+      "name": "Профиль 7",
+      "user": 7,
+      "birth_date": "1991-03-28",
+      "phone": "+375 (29) 107-17-27",
+      "created_at": "2026-01-07T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 8,
+    "fields": {
+      "name": "Профиль 8",
+      "user": 8,
+      "birth_date": "1989-10-07",
+      "phone": "+375 (29) 108-18-28",
+      "created_at": "2026-01-08T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 9,
+    "fields": {
+      "name": "Профиль 9",
+      "user": 9,
+      "birth_date": "1994-06-25",
+      "phone": "+375 (29) 109-19-29",
+      "created_at": "2026-01-09T08:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.userprofile",
+    "pk": 10,
+    "fields": {
+      "name": "Профиль 10",
+      "user": 10,
+      "birth_date": "1996-08-30",
+      "phone": "+375 (29) 110-20-30",
+      "created_at": "2026-01-10T08:00:00Z"
+    }
+  },
+  {
+    "model": "info.aboutcompany",
+    "pk": 1,
+    "fields": {
+      "title": "Аптека здоровья",
+      "text": "Современная аптечная сеть с широким ассортиментом лекарств, витаминов, товаров для детей и ухода. Мы уделяем внимание сервису, доступности и удобству заказа онлайн.",
+      "video_url": "https://youtu.be/gke69PitnHk",
+      "logo": null,
+      "history": "2018 — открытие первой аптеки.\n2019 — расширение ассортимента и запуск программы лояльности.\n2020 — запуск доставки на дом.\n2021 — подключение онлайн-консультаций.\n2022 — запуск интернет-заказов.\n2024 — модернизация каталога и склада.\n2025 — обновление сайта и личного кабинета.\n2026 — расширение сети и обновление сервиса.",
+      "requisites": "ООО «Аптека здоровья»\nИНН 0000000000\nОГРН 0000000000000\nЮридический адрес: г. Город, ул. Центральная, 1"
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 1,
+    "fields": {
+      "title": "Открытие новой аптеки на Ленина",
+      "short_content": "Рады сообщить об открытии новой аптеки по адресу ул. Ленина 15.",
+      "content": "Дорогие клиенты! Мы открыли новую аптеку в центре города. Вас ждут скидки 10% на все лекарства в первую неделю. Приходите по адресу: ул. Ленина, 15. Режим работы: круглосуточно.",
+      "image": null,
+      "created_at": "2026-05-01T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 2,
+    "fields": {
+      "title": "Бесплатная доставка для пенсионеров",
+      "short_content": "Вводим бесплатную доставку для пенсионеров при заказе от 500 рублей.",
+      "content": "С 1 марта все пенсионеры получают бесплатную доставку лекарств на дом. Минимальная сумма заказа — 500 рублей. Доставка осуществляется ежедневно с 9:00 до 21:00.",
+      "image": null,
+      "created_at": "2026-05-02T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 3,
+    "fields": {
+      "title": "Новые поступления витаминов",
+      "short_content": "Привезли широкий ассортимент витаминов от ведущих производителей.",
+      "content": "В ассортименте появились витамины групп A, B, C, D, E. Также комплексные витамины для детей и взрослых. Действует акция: купи 2 упаковки — получи 3-ю в подарок!",
+      "image": null,
+      "created_at": "2026-05-03T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 4,
+    "fields": {
+      "title": "График работы в праздники",
+      "short_content": "Изменение графика работы аптек в майские праздники.",
+      "content": "Уважаемые клиенты! В праздничные дни наши аптеки работают по следующему графику: 1 мая — выходной, 2-3 мая — с 10:00 до 18:00, с 4 мая — в обычном режиме.",
+      "image": null,
+      "created_at": "2026-05-04T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 5,
+    "fields": {
+      "title": "Акция на товары для иммунитета",
+      "short_content": "Скидка до 15% на популярные средства для поддержки иммунитета.",
+      "content": "В течение недели действует скидка до 15% на витамины и комплексы для укрепления иммунитета. Акция распространяется на выбранные товары.",
+      "image": null,
+      "created_at": "2026-05-05T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 6,
+    "fields": {
+      "title": "Обновление сайта и каталога",
+      "short_content": "Мы упростили поиск лекарств и обновили карточки товаров.",
+      "content": "Теперь искать препараты стало удобнее: улучшен фильтр по категории, цене и наличию. Также обновлены страницы каталога и информации.",
+      "image": null,
+      "created_at": "2026-05-06T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 7,
+    "fields": {
+      "title": "Новые скидки для постоянных клиентов",
+      "short_content": "Запустили программу поощрения для постоянных покупателей.",
+      "content": "Постоянные клиенты могут получать персональные предложения и участвовать в сезонных акциях. Подробности уточняйте у сотрудников аптеки.",
+      "image": null,
+      "created_at": "2026-05-07T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 8,
+    "fields": {
+      "title": "Поставки антисептиков и масок",
+      "short_content": "В наличии появились антисептики, маски и товары для гигиены.",
+      "content": "Мы пополнили ассортимент средствами индивидуальной защиты и антисептическими средствами. Товары доступны в розничных аптеках и под заказ.",
+      "image": null,
+      "created_at": "2026-05-08T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 9,
+    "fields": {
+      "title": "Снижение цен на популярные препараты",
+      "short_content": "До конца месяца действуют новые скидки.",
+      "content": "Мы снизили цены на ряд популярных препаратов и витаминов. Акция действует во всех филиалах сети.",
+      "image": null,
+      "created_at": "2026-05-09T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.news",
+    "pk": 10,
+    "fields": {
+      "title": "Запуск мобильного приложения",
+      "short_content": "Теперь заказывать лекарства можно через приложение.",
+      "content": "Вышло новое мобильное приложение для Android и iOS с функцией онлайн-заказов и уведомлений.",
+      "image": null,
+      "created_at": "2026-05-10T09:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 1,
+    "fields": {
+      "name": "Анна Иванова",
+      "rating": 5,
+      "text": "Отличная аптека! Вежливый персонал, всегда есть нужные лекарства. Спасибо за скидку пенсионерам!",
+      "created_at": "2026-05-01T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 2,
+    "fields": {
+      "name": "Михаил Петров",
+      "rating": 4,
+      "text": "Хороший выбор лекарств, но иногда приходится ждать в очереди. В остальном всё отлично.",
+      "created_at": "2026-05-02T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 3,
+    "fields": {
+      "name": "Елена Смирнова",
+      "rating": 5,
+      "text": "Очень удобно, что есть доставка на дом. Заказываю уже второй раз, всё привозят вовремя.",
+      "created_at": "2026-05-03T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 4,
+    "fields": {
+      "name": "Дмитрий Козлов",
+      "rating": 3,
+      "text": "Нормальная аптека, но цены выше, чем в соседней. Зато большой выбор.",
+      "created_at": "2026-05-04T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 5,
+    "fields": {
+      "name": "Ольга Новикова",
+      "rating": 5,
+      "text": "Лучшая аптека в районе! Всегда помогут с выбором аналога, если нужного лекарства нет.",
+      "created_at": "2026-05-05T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 6,
+    "fields": {
+      "name": "Сергей Волков",
+      "rating": 4,
+      "text": "Понравилось, что быстро нашли замену нужному препарату. Консультация была грамотной.",
+      "created_at": "2026-05-06T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 7,
+    "fields": {
+      "name": "Наталья Орлова",
+      "rating": 5,
+      "text": "Очень чистая аптека, удобный каталог и вежливые фармацевты. Буду обращаться ещё.",
+      "created_at": "2026-05-07T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 8,
+    "fields": {
+      "name": "Ирина Белова",
+      "rating": 2,
+      "text": "Заказ оформили не сразу, но потом всё исправили. Надеюсь, сервис станет быстрее.",
+      "created_at": "2026-05-08T10:00:00Z",
+      "is_published": false
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 9,
+    "fields": {
+      "name": "Павел Зимин",
+      "rating": 5,
+      "text": "Очень быстро собрали заказ и подсказали аналоги дешевле.",
+      "created_at": "2026-05-09T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.review",
+    "pk": 10,
+    "fields": {
+      "name": "Марина Алексеева",
+      "rating": 4,
+      "text": "Удобный сайт и хорошие цены на витамины.",
+      "created_at": "2026-05-10T10:00:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 1,
+    "fields": {
+      "question": "Что такое аналог лекарства?",
+      "answer": "Аналог (синоним, дженерик) — это лекарственный препарат, который содержит то же действующее вещество, но выпускается под другим торговым названием другим производителем.",
+      "created_at": "2026-05-01T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 2,
+    "fields": {
+      "question": "Что такое рецептурные лекарства?",
+      "answer": "Рецептурные лекарства — это препараты, которые отпускаются в аптеке только по рецепту врача. К ним относятся антибиотики, сильнодействующие обезболивающие и некоторые другие средства.",
+      "created_at": "2026-05-02T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 3,
+    "fields": {
+      "question": "Что такое срок годности лекарств?",
+      "answer": "Срок годности — это период, в течение которого производитель гарантирует безопасность и эффективность лекарственного препарата при правильном хранении.",
+      "created_at": "2026-05-03T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 4,
+    "fields": {
+      "question": "Что такое МНН?",
+      "answer": "МНН — международное непатентованное наименование. Это единое название действующего вещества, принятое во всём мире.",
+      "created_at": "2026-05-04T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 5,
+    "fields": {
+      "question": "Как правильно хранить лекарства?",
+      "answer": "Лекарства нужно хранить в сухом, прохладном, защищённом от света месте, недоступном для детей. Некоторые препараты требуют хранения в холодильнике.",
+      "created_at": "2026-05-05T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 6,
+    "fields": {
+      "question": "Что означает срок хранения после вскрытия?",
+      "answer": "Это период, в течение которого препарат можно использовать после открытия упаковки при соблюдении условий хранения.",
+      "created_at": "2026-05-06T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 7,
+    "fields": {
+      "question": "Можно ли делить таблетки?",
+      "answer": "Делить таблетки можно только если это допускает инструкция или таблетка имеет риску для деления.",
+      "created_at": "2026-05-07T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 8,
+    "fields": {
+      "question": "Что такое побочные эффекты?",
+      "answer": "Побочные эффекты — это нежелательные реакции организма на прием лекарства, указанные в инструкции.",
+      "created_at": "2026-05-08T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 9,
+    "fields": {
+      "question": "Что такое дженерик?",
+      "answer": "Дженерик — это аналог оригинального препарата с тем же действующим веществом.",
+      "created_at": "2026-05-09T11:00:00Z"
+    }
+  },
+  {
+    "model": "info.term",
+    "pk": 10,
+    "fields": {
+      "question": "Можно ли принимать лекарства натощак?",
+      "answer": "Это зависит от препарата. Всегда следуйте инструкции и рекомендациям врача.",
+      "created_at": "2026-05-10T11:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 1,
+    "fields": {
+      "name": "Розничная торговля"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 2,
+    "fields": {
+      "name": "Интернет-заказы"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 3,
+    "fields": {
+      "name": "Склад и логистика"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 4,
+    "fields": {
+      "name": "Администрация"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 5,
+    "fields": {
+      "name": "Бухгалтерия"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 6,
+    "fields": {
+      "name": "Маркетинг"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 7,
+    "fields": {
+      "name": "Поддержка клиентов"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 8,
+    "fields": {
+      "name": "IT отдел"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 9,
+    "fields": {
+      "name": "HR"
+    }
+  },
+  {
+    "model": "pharmacy.department",
+    "pk": 10,
+    "fields": {
+      "name": "Контроль качества"
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 1,
+    "fields": {
+      "name": "Иван Петров",
+      "department": 1,
+      "photo": null,
+      "description": "Фармацевт, консультирует покупателей и отпускает лекарства.",
+      "phone": "+375 (29) 101-11-11",
+      "email": "ivan.petrov@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 1,
+    "fields": {
+      "name": "иван_account",
+      "date_of_birth": "1995-05-10",
+      "employee": 1
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 2,
+    "fields": {
+      "name": "Мария Сидорова",
+      "department": 2,
+      "photo": null,
+      "description": "Обрабатывает интернет-заказы и связь с клиентами.",
+      "phone": "+375 (29) 102-22-22",
+      "email": "maria.sidorova@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 2,
+    "fields": {
+      "name": "мария_account",
+      "date_of_birth": "1998-08-20",
+      "employee": 2
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 3,
+    "fields": {
+      "name": "Алексей Орлов",
+      "department": 3,
+      "photo": null,
+      "description": "Контролирует складские остатки и поставки.",
+      "phone": "+375 (29) 103-33-33",
+      "email": "alexey.orlov@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 3,
+    "fields": {
+      "name": "алексей_account",
+      "date_of_birth": "1992-03-14",
+      "employee": 3
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 4,
+    "fields": {
+      "name": "Ольга Павлова",
+      "department": 4,
+      "photo": null,
+      "description": "Занимается административными вопросами и организацией работы.",
+      "phone": "+375 (29) 104-44-44",
+      "email": "olga.pavlova@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 4,
+    "fields": {
+      "name": "ольга_account",
+      "date_of_birth": "1989-11-02",
+      "employee": 4
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 5,
+    "fields": {
+      "name": "Виктор Лебедев",
+      "department": 5,
+      "photo": null,
+      "description": "Ведет финансовую отчетность и оплату поставок.",
+      "phone": "+375 (29) 105-55-55",
+      "email": "viktor.lebedev@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 5,
+    "fields": {
+      "name": "виктор_account",
+      "date_of_birth": "1991-06-15",
+      "employee": 5
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 6,
+    "fields": {
+      "name": "Алина Романова",
+      "department": 6,
+      "photo": null,
+      "description": "Отвечает за рекламные кампании и продвижение.",
+      "phone": "+375 (29) 106-66-66",
+      "email": "alina.romanova@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 6,
+    "fields": {
+      "name": "алина_account",
+      "date_of_birth": "1996-09-12",
+      "employee": 6
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 7,
+    "fields": {
+      "name": "Кирилл Егоров",
+      "department": 7,
+      "photo": null,
+      "description": "Работает с обращениями клиентов.",
+      "phone": "+375 (29) 107-77-77",
+      "email": "kirill.egorov@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 7,
+    "fields": {
+      "name": "кирилл_account",
+      "date_of_birth": "1994-04-18",
+      "employee": 7
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 8,
+    "fields": {
+      "name": "Татьяна Белик",
+      "department": 8,
+      "photo": null,
+      "description": "Поддержка сайта и внутренних систем.",
+      "phone": "+375 (29) 108-88-88",
+      "email": "tatyana.belik@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 8,
+    "fields": {
+      "name": "татьяна_account",
+      "date_of_birth": "1990-11-30",
+      "employee": 8
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 9,
+    "fields": {
+      "name": "Никита Фролов",
+      "department": 9,
+      "photo": null,
+      "description": "Подбор и адаптация сотрудников.",
+      "phone": "+375 (29) 109-99-99",
+      "email": "nikita.frolov@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 9,
+    "fields": {
+      "name": "никита_account",
+      "date_of_birth": "1993-08-22",
+      "employee": 9
+    }
+  },
+  {
+    "model": "pharmacy.employee",
+    "pk": 10,
+    "fields": {
+      "name": "Светлана Громова",
+      "department": 10,
+      "photo": null,
+      "description": "Контроль качества медикаментов.",
+      "phone": "+375 (29) 110-10-10",
+      "email": "svetlana.gromova@example.com"
+    }
+  },
+  {
+    "model": "pharmacy.employeeaccount",
+    "pk": 10,
+    "fields": {
+      "name": "светлана_account",
+      "date_of_birth": "1988-01-14",
+      "employee": 10
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 1,
+    "fields": {
+      "name": "Обезболивающие"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 2,
+    "fields": {
+      "name": "Антибиотики"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 3,
+    "fields": {
+      "name": "Витамины"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 4,
+    "fields": {
+      "name": "Сердечные"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 5,
+    "fields": {
+      "name": "От простуды"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 6,
+    "fields": {
+      "name": "Антигистаминные"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 7,
+    "fields": {
+      "name": "ЖКТ"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 8,
+    "fields": {
+      "name": "Иммунитет"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 9,
+    "fields": {
+      "name": "Противовирусные"
+    }
+  },
+  {
+    "model": "pharmacy.categorymedication",
+    "pk": 10,
+    "fields": {
+      "name": "Седативные"
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 1,
+    "fields": {
+      "name": "Аспирин",
+      "category": 1,
+      "description": "Снимает боль и жар.",
+      "cost": "50.00",
+      "count": 100
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 2,
+    "fields": {
+      "name": "Но-шпа",
+      "category": 1,
+      "description": "Снимает спазмы.",
+      "cost": "120.00",
+      "count": 75
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 3,
+    "fields": {
+      "name": "Ибупрофен",
+      "category": 1,
+      "description": "Противовоспалительное и обезболивающее средство.",
+      "cost": "85.00",
+      "count": 140
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 4,
+    "fields": {
+      "name": "Амоксициллин",
+      "category": 2,
+      "description": "Антибиотик широкого спектра.",
+      "cost": "300.00",
+      "count": 50
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 5,
+    "fields": {
+      "name": "Азитромицин",
+      "category": 2,
+      "description": "Антибактериальный препарат.",
+      "cost": "420.00",
+      "count": 40
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 6,
+    "fields": {
+      "name": "Цефтриаксон",
+      "category": 2,
+      "description": "Антибиотик для инъекционного применения.",
+      "cost": "560.00",
+      "count": 18
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 7,
+    "fields": {
+      "name": "Витамин C",
+      "category": 3,
+      "description": "Аскорбиновая кислота.",
+      "cost": "30.00",
+      "count": 200
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 8,
+    "fields": {
+      "name": "Компливит",
+      "category": 3,
+      "description": "Поливитаминный комплекс.",
+      "cost": "250.00",
+      "count": 65
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 9,
+    "fields": {
+      "name": "Мультитабс",
+      "category": 3,
+      "description": "Комплекс витаминов и минералов.",
+      "cost": "290.00",
+      "count": 55
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 10,
+    "fields": {
+      "name": "Панангин",
+      "category": 4,
+      "description": "Поддержка работы сердца.",
+      "cost": "180.00",
+      "count": 90
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 11,
+    "fields": {
+      "name": "Милдронат",
+      "category": 4,
+      "description": "Средство для поддержки сердечно-сосудистой системы.",
+      "cost": "390.00",
+      "count": 35
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 12,
+    "fields": {
+      "name": "Каптоприл",
+      "category": 4,
+      "description": "Снижение артериального давления.",
+      "cost": "75.00",
+      "count": 70
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 13,
+    "fields": {
+      "name": "Парацетамол",
+      "category": 5,
+      "description": "Жаропонижающее средство.",
+      "cost": "40.00",
+      "count": 150
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 14,
+    "fields": {
+      "name": "Ринза",
+      "category": 5,
+      "description": "Средство от симптомов простуды.",
+      "cost": "160.00",
+      "count": 55
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 15,
+    "fields": {
+      "name": "Терафлю",
+      "category": 5,
+      "description": "Комбинированное средство от простуды.",
+      "cost": "210.00",
+      "count": 48
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 16,
+    "fields": {
+      "name": "Лоратадин",
+      "category": 6,
+      "description": "Снимает аллергию.",
+      "cost": "80.00",
+      "count": 120
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 17,
+    "fields": {
+      "name": "Цетиризин",
+      "category": 6,
+      "description": "Антигистаминное средство.",
+      "cost": "95.00",
+      "count": 100
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 18,
+    "fields": {
+      "name": "Супрастин",
+      "category": 6,
+      "description": "Средство против аллергии.",
+      "cost": "110.00",
+      "count": 95
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 19,
+    "fields": {
+      "name": "Мезим",
+      "category": 7,
+      "description": "Улучшает пищеварение.",
+      "cost": "180.00",
+      "count": 90
+    }
+  },
+  {
+    "model": "pharmacy.medication",
+    "pk": 20,
+    "fields": {
+      "name": "Энтеросгель",
+      "category": 7,
+      "description": "Сорбент для ЖКТ.",
+      "cost": "260.00",
+      "count": 60
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 1,
+    "fields": {
+      "name": "Поставщик 1",
+      "medications": [
+        1,
+        4,
+        7,
+        13
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 2,
+    "fields": {
+      "name": "Поставщик 2",
+      "medications": [
+        2,
+        5,
+        8,
+        14
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 3,
+    "fields": {
+      "name": "Поставщик 3",
+      "medications": [
+        3,
+        6,
+        9,
+        15
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 4,
+    "fields": {
+      "name": "Поставщик 4",
+      "medications": [
+        10,
+        16,
+        19
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 5,
+    "fields": {
+      "name": "Поставщик 5",
+      "medications": [
+        11,
+        17,
+        20
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 6,
+    "fields": {
+      "name": "Поставщик 6",
+      "medications": [
+        12,
+        18
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 7,
+    "fields": {
+      "name": "Поставщик 7",
+      "medications": [
+        1,
+        8,
+        16,
+        19
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 8,
+    "fields": {
+      "name": "Поставщик 8",
+      "medications": [
+        4,
+        10,
+        13,
+        20
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 9,
+    "fields": {
+      "name": "Поставщик 9",
+      "medications": [
+        2,
+        6,
+        11,
+        14
+      ]
+    }
+  },
+  {
+    "model": "pharmacy.supplier",
+    "pk": 10,
+    "fields": {
+      "name": "Поставщик 10",
+      "medications": [
+        3,
+        5,
+        7,
+        18
+      ]
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "created_at": "2026-05-10T10:15:00Z",
+      "status": "done",
+      "total_cost": "140.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "created_at": "2026-05-11T10:15:00Z",
+      "status": "approved",
+      "total_cost": "1150.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "created_at": "2026-05-12T10:15:00Z",
+      "status": "rejected",
+      "total_cost": "580.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "created_at": "2026-05-13T10:15:00Z",
+      "status": "done",
+      "total_cost": "900.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "created_at": "2026-05-14T10:15:00Z",
+      "status": "new",
+      "total_cost": "735.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "created_at": "2026-05-15T10:15:00Z",
+      "status": "approved",
+      "total_cost": "320.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 7,
+    "fields": {
+      "user": 7,
+      "created_at": "2026-05-16T10:15:00Z",
+      "status": "done",
+      "total_cost": "990.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 8,
+    "fields": {
+      "user": 8,
+      "created_at": "2026-05-17T10:15:00Z",
+      "status": "new",
+      "total_cost": "295.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 9,
+    "fields": {
+      "user": 9,
+      "created_at": "2026-05-18T10:15:00Z",
+      "status": "approved",
+      "total_cost": "665.00"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 10,
+    "fields": {
+      "user": 10,
+      "created_at": "2026-05-19T10:15:00Z",
+      "status": "done",
+      "total_cost": "960.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "medication": 1,
+      "quantity": 2,
+      "price": "50.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "medication": 13,
+      "quantity": 1,
+      "price": "40.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "medication": 4,
+      "quantity": 3,
+      "price": "300.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 2,
+      "medication": 8,
+      "quantity": 1,
+      "price": "250.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 3,
+      "medication": 6,
+      "quantity": 2,
+      "price": "250.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 6,
+    "fields": {
+      "order": 3,
+      "medication": 16,
+      "quantity": 1,
+      "price": "80.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 7,
+    "fields": {
+      "order": 4,
+      "medication": 10,
+      "quantity": 3,
+      "price": "180.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 8,
+    "fields": {
+      "order": 4,
+      "medication": 19,
+      "quantity": 2,
+      "price": "180.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 9,
+    "fields": {
+      "order": 5,
+      "medication": 14,
+      "quantity": 4,
+      "price": "160.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 10,
+    "fields": {
+      "order": 5,
+      "medication": 17,
+      "quantity": 1,
+      "price": "95.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 11,
+    "fields": {
+      "order": 6,
+      "medication": 7,
+      "quantity": 2,
+      "price": "30.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 12,
+    "fields": {
+      "order": 6,
+      "medication": 20,
+      "quantity": 1,
+      "price": "260.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 13,
+    "fields": {
+      "order": 7,
+      "medication": 11,
+      "quantity": 2,
+      "price": "390.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 14,
+    "fields": {
+      "order": 7,
+      "medication": 15,
+      "quantity": 1,
+      "price": "210.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 15,
+    "fields": {
+      "order": 8,
+      "medication": 12,
+      "quantity": 1,
+      "price": "75.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 16,
+    "fields": {
+      "order": 8,
+      "medication": 18,
+      "quantity": 2,
+      "price": "110.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 17,
+    "fields": {
+      "order": 9,
+      "medication": 3,
+      "quantity": 1,
+      "price": "85.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 18,
+    "fields": {
+      "order": 9,
+      "medication": 9,
+      "quantity": 2,
+      "price": "290.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 19,
+    "fields": {
+      "order": 10,
+      "medication": 5,
+      "quantity": 2,
+      "price": "420.00"
+    }
+  },
+  {
+    "model": "shop.orderitem",
+    "pk": 20,
+    "fields": {
+      "order": 10,
+      "medication": 2,
+      "quantity": 1,
+      "price": "120.00"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "created_at": "2026-05-01T08:00:00Z",
+      "updated_at": "2026-05-01T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "created_at": "2026-05-02T08:00:00Z",
+      "updated_at": "2026-05-02T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "created_at": "2026-05-03T08:00:00Z",
+      "updated_at": "2026-05-03T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "created_at": "2026-05-04T08:00:00Z",
+      "updated_at": "2026-05-04T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "created_at": "2026-05-05T08:00:00Z",
+      "updated_at": "2026-05-05T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "created_at": "2026-05-06T08:00:00Z",
+      "updated_at": "2026-05-06T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 7,
+    "fields": {
+      "user": 7,
+      "created_at": "2026-05-07T08:00:00Z",
+      "updated_at": "2026-05-07T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 8,
+    "fields": {
+      "user": 8,
+      "created_at": "2026-05-08T08:00:00Z",
+      "updated_at": "2026-05-08T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 9,
+    "fields": {
+      "user": 9,
+      "created_at": "2026-05-09T08:00:00Z",
+      "updated_at": "2026-05-09T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cart",
+    "pk": 10,
+    "fields": {
+      "user": 10,
+      "created_at": "2026-05-10T08:00:00Z",
+      "updated_at": "2026-05-10T08:30:00Z"
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 1,
+    "fields": {
+      "cart": 1,
+      "medication": 2,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 2,
+    "fields": {
+      "cart": 2,
+      "medication": 5,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 3,
+    "fields": {
+      "cart": 3,
+      "medication": 9,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 4,
+    "fields": {
+      "cart": 4,
+      "medication": 12,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 5,
+    "fields": {
+      "cart": 5,
+      "medication": 15,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 6,
+    "fields": {
+      "cart": 6,
+      "medication": 18,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 7,
+    "fields": {
+      "cart": 7,
+      "medication": 20,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 8,
+    "fields": {
+      "cart": 8,
+      "medication": 7,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 9,
+    "fields": {
+      "cart": 9,
+      "medication": 11,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "shop.cartitem",
+    "pk": 10,
+    "fields": {
+      "cart": 10,
+      "medication": 14,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "employee": 1,
+      "total_cost": "140.00",
+      "made": true,
+      "sale_date": "2026-05-10T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "employee": 2,
+      "total_cost": "1150.00",
+      "made": true,
+      "sale_date": "2026-05-11T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "employee": 3,
+      "total_cost": "580.00",
+      "made": false,
+      "sale_date": "2026-05-12T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "employee": 4,
+      "total_cost": "900.00",
+      "made": true,
+      "sale_date": "2026-05-13T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 5,
+    "fields": {
+      "order": 5,
+      "employee": 5,
+      "total_cost": "735.00",
+      "made": false,
+      "sale_date": "2026-05-14T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 6,
+    "fields": {
+      "order": 6,
+      "employee": 6,
+      "total_cost": "320.00",
+      "made": true,
+      "sale_date": "2026-05-15T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 7,
+    "fields": {
+      "order": 7,
+      "employee": 7,
+      "total_cost": "990.00",
+      "made": true,
+      "sale_date": "2026-05-16T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 8,
+    "fields": {
+      "order": 8,
+      "employee": 8,
+      "total_cost": "295.00",
+      "made": false,
+      "sale_date": "2026-05-17T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 9,
+    "fields": {
+      "order": 9,
+      "employee": 9,
+      "total_cost": "665.00",
+      "made": true,
+      "sale_date": "2026-05-18T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.sale",
+    "pk": 10,
+    "fields": {
+      "order": 10,
+      "employee": 10,
+      "total_cost": "960.00",
+      "made": true,
+      "sale_date": "2026-05-19T12:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 1,
+    "fields": {
+      "sale": 1,
+      "medication": 1,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 2,
+    "fields": {
+      "sale": 1,
+      "medication": 13,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 3,
+    "fields": {
+      "sale": 2,
+      "medication": 4,
+      "count": 3
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 4,
+    "fields": {
+      "sale": 2,
+      "medication": 8,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 5,
+    "fields": {
+      "sale": 3,
+      "medication": 6,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 6,
+    "fields": {
+      "sale": 3,
+      "medication": 16,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 7,
+    "fields": {
+      "sale": 4,
+      "medication": 10,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 8,
+    "fields": {
+      "sale": 4,
+      "medication": 19,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 9,
+    "fields": {
+      "sale": 5,
+      "medication": 14,
+      "count": 4
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 10,
+    "fields": {
+      "sale": 5,
+      "medication": 17,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 11,
+    "fields": {
+      "sale": 6,
+      "medication": 7,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 12,
+    "fields": {
+      "sale": 6,
+      "medication": 20,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 13,
+    "fields": {
+      "sale": 7,
+      "medication": 11,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 14,
+    "fields": {
+      "sale": 7,
+      "medication": 15,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 15,
+    "fields": {
+      "sale": 8,
+      "medication": 12,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 16,
+    "fields": {
+      "sale": 8,
+      "medication": 18,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 17,
+    "fields": {
+      "sale": 9,
+      "medication": 3,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 18,
+    "fields": {
+      "sale": 9,
+      "medication": 9,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 19,
+    "fields": {
+      "sale": 10,
+      "medication": 5,
+      "count": 2
+    }
+  },
+  {
+    "model": "pharmacy.saleitem",
+    "pk": 20,
+    "fields": {
+      "sale": 10,
+      "medication": 2,
+      "count": 1
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 1,
+    "fields": {
+      "name": "Для пенсионеров",
+      "min_age": 60,
+      "is_pensioner": true,
+      "is_disability": false,
+      "discount_cost": "500.00",
+      "discount_percent": 10,
+      "is_active": true,
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-12-31T23:59:59Z",
+      "usage_limit": 1000,
+      "used_count": 50
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 2,
+    "fields": {
+      "name": "Для инвалидов",
+      "min_age": null,
+      "is_pensioner": false,
+      "is_disability": true,
+      "discount_cost": "0.00",
+      "discount_percent": 20,
+      "is_active": true,
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-12-31T23:59:59Z",
+      "usage_limit": 1000,
+      "used_count": 30
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 3,
+    "fields": {
+      "name": "Молодым мамам",
+      "min_age": null,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "1000.00",
+      "discount_percent": 15,
+      "is_active": true,
+      "valid_from": "2026-03-01T00:00:00Z",
+      "valid_to": "2026-09-01T23:59:59Z",
+      "usage_limit": 500,
+      "used_count": 20
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 4,
+    "fields": {
+      "name": "Студентам",
+      "min_age": 18,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "700.00",
+      "discount_percent": 7,
+      "is_active": true,
+      "valid_from": "2026-02-01T00:00:00Z",
+      "valid_to": "2026-11-30T23:59:59Z",
+      "usage_limit": 800,
+      "used_count": 64
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 5,
+    "fields": {
+      "name": "Хроническим пациентам",
+      "min_age": 45,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "1500.00",
+      "discount_percent": 12,
+      "is_active": true,
+      "valid_from": "2026-04-01T00:00:00Z",
+      "valid_to": "2026-10-01T23:59:59Z",
+      "usage_limit": 600,
+      "used_count": 18
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 6,
+    "fields": {
+      "name": "Многодетным семьям",
+      "min_age": null,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "1200.00",
+      "discount_percent": 14,
+      "is_active": true,
+      "valid_from": "2026-01-15T00:00:00Z",
+      "valid_to": "2026-12-31T23:59:59Z",
+      "usage_limit": 400,
+      "used_count": 22
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 7,
+    "fields": {
+      "name": "Ветеранам",
+      "min_age": 55,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "300.00",
+      "discount_percent": 18,
+      "is_active": true,
+      "valid_from": "2026-02-10T00:00:00Z",
+      "valid_to": "2026-12-31T23:59:59Z",
+      "usage_limit": 250,
+      "used_count": 17
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 8,
+    "fields": {
+      "name": "Работникам медицины",
+      "min_age": 25,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "800.00",
+      "discount_percent": 11,
+      "is_active": true,
+      "valid_from": "2026-03-10T00:00:00Z",
+      "valid_to": "2026-12-31T23:59:59Z",
+      "usage_limit": 700,
+      "used_count": 41
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 9,
+    "fields": {
+      "name": "Новым клиентам",
+      "min_age": null,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "2000.00",
+      "discount_percent": 25,
+      "is_active": true,
+      "valid_from": "2026-05-01T00:00:00Z",
+      "valid_to": "2026-08-01T23:59:59Z",
+      "usage_limit": 300,
+      "used_count": 12
+    }
+  },
+  {
+    "model": "pharmacy.benefits",
+    "pk": 10,
+    "fields": {
+      "name": "На сезонные витамины",
+      "min_age": null,
+      "is_pensioner": false,
+      "is_disability": false,
+      "discount_cost": "600.00",
+      "discount_percent": 9,
+      "is_active": false,
+      "valid_from": "2026-06-01T00:00:00Z",
+      "valid_to": "2026-09-01T23:59:59Z",
+      "usage_limit": 150,
+      "used_count": 0
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 1,
+    "fields": {
+      "discount_cost": "1000.00",
+      "discount_percent": 10,
+      "is_active": true,
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-06-01T23:59:59Z",
+      "usage_limit": 500,
+      "used_count": 100
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 2,
+    "fields": {
+      "discount_cost": "2000.00",
+      "discount_percent": 20,
+      "is_active": true,
+      "valid_from": "2026-02-01T00:00:00Z",
+      "valid_to": "2026-08-01T23:59:59Z",
+      "usage_limit": 300,
+      "used_count": 50
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 3,
+    "fields": {
+      "discount_cost": "500.00",
+      "discount_percent": 5,
+      "is_active": false,
+      "valid_from": "2025-01-01T00:00:00Z",
+      "valid_to": "2025-12-31T23:59:59Z",
+      "usage_limit": 1000,
+      "used_count": 950
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 4,
+    "fields": {
+      "discount_cost": "1500.00",
+      "discount_percent": 12,
+      "is_active": true,
+      "valid_from": "2026-03-01T00:00:00Z",
+      "valid_to": "2026-09-01T23:59:59Z",
+      "usage_limit": 400,
+      "used_count": 72
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 5,
+    "fields": {
+      "discount_cost": "3000.00",
+      "discount_percent": 25,
+      "is_active": true,
+      "valid_from": "2026-04-15T00:00:00Z",
+      "valid_to": "2026-07-15T23:59:59Z",
+      "usage_limit": 200,
+      "used_count": 29
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 6,
+    "fields": {
+      "discount_cost": "750.00",
+      "discount_percent": 8,
+      "is_active": true,
+      "valid_from": "2026-05-01T00:00:00Z",
+      "valid_to": "2026-10-01T23:59:59Z",
+      "usage_limit": 600,
+      "used_count": 33
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 7,
+    "fields": {
+      "discount_cost": "2500.00",
+      "discount_percent": 15,
+      "is_active": true,
+      "valid_from": "2026-05-10T00:00:00Z",
+      "valid_to": "2026-12-31T23:59:59Z",
+      "usage_limit": 350,
+      "used_count": 14
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 8,
+    "fields": {
+      "discount_cost": "600.00",
+      "discount_percent": 7,
+      "is_active": false,
+      "valid_from": "2026-01-15T00:00:00Z",
+      "valid_to": "2026-03-15T23:59:59Z",
+      "usage_limit": 150,
+      "used_count": 150
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 9,
+    "fields": {
+      "discount_cost": "1800.00",
+      "discount_percent": 18,
+      "is_active": true,
+      "valid_from": "2026-02-20T00:00:00Z",
+      "valid_to": "2026-11-20T23:59:59Z",
+      "usage_limit": 275,
+      "used_count": 61
+    }
+  },
+  {
+    "model": "pharmacy.coupons",
+    "pk": 10,
+    "fields": {
+      "discount_cost": "4000.00",
+      "discount_percent": 30,
+      "is_active": true,
+      "valid_from": "2026-06-01T00:00:00Z",
+      "valid_to": "2026-12-01T23:59:59Z",
+      "usage_limit": 100,
+      "used_count": 5
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 1,
+    "fields": {
+      "title": "Фармацевт",
+      "description": "Работа с клиентами, отпуск лекарств, консультация покупателей.",
+      "is_active": true,
+      "created_at": "2026-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 2,
+    "fields": {
+      "title": "Менеджер по закупкам",
+      "description": "Поиск поставщиков, формирование заявок, контроль остатков.",
+      "is_active": true,
+      "created_at": "2026-01-02T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 3,
+    "fields": {
+      "title": "Курьер",
+      "description": "Доставка заказов на дом.",
+      "is_active": true,
+      "created_at": "2026-01-03T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 4,
+    "fields": {
+      "title": "Оператор интернет-заказов",
+      "description": "Обработка онлайн-заказов и связь с клиентами.",
+      "is_active": true,
+      "created_at": "2026-01-04T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 5,
+    "fields": {
+      "title": "Администратор",
+      "description": "Организация работы смены и координация персонала.",
+      "is_active": false,
+      "created_at": "2026-01-05T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 6,
+    "fields": {
+      "title": "Системный администратор",
+      "description": "Поддержка серверов и внутренней инфраструктуры.",
+      "is_active": true,
+      "created_at": "2026-01-06T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 7,
+    "fields": {
+      "title": "Маркетолог",
+      "description": "Разработка рекламных кампаний и аналитика.",
+      "is_active": true,
+      "created_at": "2026-01-07T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 8,
+    "fields": {
+      "title": "Специалист поддержки",
+      "description": "Консультации клиентов по телефону и онлайн.",
+      "is_active": true,
+      "created_at": "2026-01-08T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 9,
+    "fields": {
+      "title": "Бухгалтер",
+      "description": "Работа с финансовой документацией и отчетностью.",
+      "is_active": true,
+      "created_at": "2026-01-09T10:00:00Z"
+    }
+  },
+  {
+    "model": "pharmacy.vacancy",
+    "pk": 10,
+    "fields": {
+      "title": "Специалист по качеству",
+      "description": "Контроль качества продукции и соблюдение стандартов.",
+      "is_active": true,
+      "created_at": "2026-01-10T10:00:00Z"
+    }
+  }
+]

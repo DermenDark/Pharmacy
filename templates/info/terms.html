@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Словарь{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Словарь терминов</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по вопросу..." class="input">
+        <button type="submit">Поиск</button>
+    </form>
+    
+    {% if perms.pharmacy.add_term %}
+        <a href="{% url 'term_create' %}">Добавить термин</a>
+    {% endif %}
+
+    {% for item in terms %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <h3>{{ item.question }}</h3>
+            <p>{{ item.answer }}</p>
+            <p><small>{{ item.created_at }}</small></p>
+
+            {% if perms.pharmacy.change_term %}
+                <a href="{% url 'term_edit' item.id %}">Редактировать</a>
+            {% endif %}
+
+            {% if perms.pharmacy.delete_term %}
+                <a href="{% url 'term_delete' item.id %}">Удалить</a>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>Термины пока не добавлены.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,138 @@
+<header>
+    <div>
+        <h2><a href="{% url 'about_company' %}">Аптека у Пабло</a></h2>
+
+        <nav>
+            <a href="{% url 'about_company' %}">Главная</a>
+            <a href="{% url 'catalog' %}">Каталог</a>
+            <a href="{% url 'news' %}">Новости</a>
+            <a href="{% url 'terms' %}">Словарь</a>
+            <a href="{% url 'contacts' %}">Контакты</a>
+            <a href="{% url 'vacancies' %}">Вакансии</a>
+            <a href="{% url 'reviews' %}">Отзывы</a>
+            <a href="{% url 'promo' %}">Льготы и купоны</a>
+
+            {% if user.is_authenticated %}
+                <div>
+                    {% if perms.info.view_sale %}
+                        <h4>Функционал CRUD:</h4>
+                    {% endif %}
+                    <div>
+                        {% if perms.pharmacy.view_department or perms.pharmacy.view_employee %}
+                            <div>
+                                <strong>Персонал</strong>
+
+                                {% if perms.pharmacy.view_department %}
+                                    <a href="{% url 'department_list' %}">Отделы</a>
+                                {% endif %}
+
+                                {% if perms.pharmacy.view_employee %}
+                                    <a href="{% url 'employee_list' %}">Сотрудники</a>
+                                {% endif %}
+
+                                {% if perms.pharmacy.view_vacancy %}
+                                    <a href="{% url 'vacancy_list' %}">Вакансии</a>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
+                        {% if perms.pharmacy.view_medication or perms.pharmacy.view_categorymedication or perms.pharmacy.view_supplier %}
+                            <div>
+                                <strong>Склад</strong>
+
+                                {% if perms.pharmacy.view_medication %}
+                                    <a href="{% url 'catalog' %}">Лекарства</a>
+                                {% endif %}
+
+                                {% if perms.pharmacy.view_categorymedication %}
+                                    <a href="{% url 'category_list' %}">Категории</a>
+                                {% endif %}
+
+                                {% if perms.pharmacy.view_supplier %}
+                                    <a href="{% url 'supplier_list' %}">Поставщики</a>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
+                        {% if perms.pharmacy.view_sale or perms.pharmacy.view_saleitem or perms.pharmacy.view_coupons or perms.pharmacy.view_benefits %}
+                            <div>
+                                <strong>Продажи</strong>
+
+                                {% if perms.pharmacy.view_sale %}
+                                    <a href="{% url 'sale_list' %}">Продажи</a>
+                                {% endif %}
+
+                                {% if perms.pharmacy.view_saleitem %}
+                                    <a href="{% url 'saleitem_list' %}">Позиции продаж</a>
+                                {% endif %}
+
+                                {% if perms.pharmacy.view_benefits %}
+                                    <a href="{% url 'benefits_list' %}">Льготы</a>
+                                {% endif %}
+
+                                {% if perms.pharmacy.view_coupons %}
+                                    <a href="{% url 'coupons_list' %}">Купоны</a>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
+                        {% if perms.info.view_about_company or perms.info.view_news or perms.info.view_terms or perms.info.view_reviews %}
+                            <div>
+                                <strong>Контент</strong>
+
+                                {% if perms.info.view_about_company %}
+                                    <a href="{% url 'admin_about_company' %}">Главная</a>
+                                {% endif %}
+
+                                {% if perms.info.view_news %}
+                                    <a href="{% url 'admin_news' %}">Новости</a>
+                                {% endif %}
+
+                                {% if perms.info.view_terms %}
+                                    <a href="{% url 'admin_terms' %}">Словарь</a>
+                                {% endif %}
+
+                                {% if perms.info.view_reviews %}
+                                    <a href="{% url 'admin_reviews' %}">Отзывы</a>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                        {% if perms.shop.view_order %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'shop:orders_to_process' %}">
+                                    Заказы
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if user.is_superuser %}
+                            <div>
+                                <strong>Суперпользователь</strong>
+                                <a href="{% url 'user_management' %}">Пользователи</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+                <div>
+                    {% if perms.pharmacy.view_sale %}
+                        <a href="{% url 'stats_graf:stats' %}">Статистика</a>
+                    {% endif %}
+                </div>
+                <span>Привет, {{ user.username }}</span>
+                <a href="{% url 'shop:profile' %}">Профиль</a>
+                <a href="{% url 'shop:cart' %}">Корзина</a>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Выйти</button>
+                </form>
+            {% else %}
+                <form action="{% url 'login_view' %}" method="get" style="display:inline;">
+                    <button type="submit">Войти</button>
+                </form>
+            {% endif %}
+        </nav>
+        <h1></h1>
+    </div>
+</header>

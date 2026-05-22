@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Удаление медикамента</h1>
+
+    <p>Вы точно хотите удалить:</p>
+
+    <strong>{{ medic.name }}</strong>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <button type="submit" style="color:red;">
+            Да, удалить
+        </button>
+
+        <a href="{{ request.META.HTTP_REFERER }}">Отмена</a>
+    </form>
+</body>
+</html>

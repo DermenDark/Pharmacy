@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Пользователи{% endblock %}
+
+{% block content %}
+<h1>Все пользователи</h1>
+
+{% if users %}
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Логин</th>
+            <th>Email</th>
+            <th>Суперпользователь</th>
+            <th>Группы</th>
+            <th>Изменить группы</th>
+        </tr>
+        {% for u in users %}
+            <tr>
+                <td>{{ u.username }}</td>
+                <td>{{ u.email|default:"—" }}</td>
+                <td>{% if u.is_superuser %}Да{% else %}Нет{% endif %}</td>
+                <td>
+                    {% for group in u.groups.all %}
+                        {{ group.name }}{% if not forloop.last %}, {% endif %}
+                    {% empty %}
+                        —
+                    {% endfor %}
+                </td>
+                <td>
+                    {% if not u.is_superuser %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="user_id" value="{{ u.id }}">
+                            {% for group in groups %}
+                                <label style="display:block;">
+                                    <input type="checkbox" name="groups" value="{{ group.name }}"
+                                           {% if group in u.groups.all %}checked{% endif %}>
+                                    {{ group.name }}
+                                </label>
+                            {% endfor %}
+                            <button type="submit">Сохранить</button>
+                        </form>
+                    {% else %}
+                        —
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>Пользователи не найдены.</p>
+{% endif %}
+{% endblock %}

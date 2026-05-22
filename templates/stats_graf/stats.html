@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% block title %}Статистика аптеки{% endblock %}
+
+{% block content %}
+<h1>Статистика аптеки</h1>
+
+{% if user.is_authenticated %}
+  <section>
+    <h2>Дата и время</h2>
+    <p>Текущая временная зона: {{ current_timezone_name }}</p>
+    <p>Текущее время: {{ current_datetime_local }}</p>
+    <p>UTC: {{ current_datetime_utc }}</p>
+  </section>
+
+  <form method="get" style="margin-bottom: 20px;">
+    <label>Медикамент:
+      <select name="medication">
+        <option value="">-- Все --</option>
+        {% for med in medications %}
+          <option value="{{ med.id }}" {% if med.id|stringformat:"s" == selected_medication_id %}selected{% endif %}>
+            {{ med.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>Сотрудник:
+      <select name="employee">
+        <option value="">-- Все --</option>
+        {% for emp in employees %}
+          <option value="{{ emp.id }}" {% if emp.id|stringformat:"s" == selected_employee_id %}selected{% endif %}>
+            {{ emp.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <input type="hidden" name="tz" id="tz-input" value="{{ current_timezone_name }}">
+    <button type="submit">Применить</button>
+  </form>
+
+  <script>
+    const tzInput = document.getElementById("tz-input");
+    if (tzInput && Intl.DateTimeFormat) {
+      tzInput.value = Intl.DateTimeFormat().resolvedOptions().timeZone || tzInput.value;
+    }
+  </script>
+
+  <section>
+    {% if selected_medication %}
+      <h2>Продажи медикамента: {{ selected_medication.name }}</h2>
+    {% else %}
+      <h2>Все продажи медикаментов</h2>
+    {% endif %}
+
+    {% if medication_sales %}
+      <table border="1" cellpadding="5">
+        <tr>
+          <th>Дата</th>
+          <th>Медикамент</th>
+          <th>Кол-во</th>
+          <th>Цена</th>
+          <th>Сумма</th>
+          <th>Сотрудник</th>
+        </tr>
+        {% for item in medication_sales %}
+          <tr>
+            <td>{{ item.sale.sale_date|date:"d.m.Y H:i" }}</td>
+            <td>{{ item.medication.name }}</td>
+            <td>{{ item.count }}</td>
+            <td>{{ item.medication.cost }}</td>
+            <td>{{ item.item_total }}</td>
+            <td>{{ item.sale.employee.name }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p>Продаж не найдено.</p>
+    {% endif %}
+  </section>
+  
+  <section>
+    {% if selected_employee %}
+      <h2>Продажи сотрудника: {{ selected_employee.name }}</h2>
+    {% else %}
+      <h2>Все продажи сотрудников</h2>
+    {% endif %}
+
+    {% if employee_sales %}
+      <table border="1" cellpadding="5">
+        <tr><th>Дата</th><th>Сумма</th><th>Статус</th><th>Сотрудник</th></tr>
+        {% for sale in employee_sales %}
+          <tr>
+            <td>{{ sale.sale_date|date:"d.m.Y H:i" }}</td>
+            <td>{{ sale.total_cost }}</td>
+            <td>{% if sale.made %}Завершена{% else %}В процессе{% endif %}</td>
+            <td>{{ sale.employee.name }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p>Продаж не найдено.</p>
+    {% endif %}
+  </section>
+
+  <section>
+    <h2>Общая выручка</h2>
+    <p><b>{{ total_revenue }}</b></p>
+
+    <h3>Статистика по продажам</h3>
+    <p>Среднее: {{ sales_mean|default:"—" }}</p>
+    <p>Медиана: {{ sales_median|default:"—" }}</p>
+    <p>Мода: {{ sales_mode|default:"—" }}</p>
+
+    <h3>Статистика по возрасту клиентов</h3>
+    <p>Средний возраст: {{ clients_mean_age|default:"—" }}</p>
+    <p>Медианный возраст: {{ clients_median_age|default:"—" }}</p>
+  </section>
+
+  <section>
+    <h2>Выручка по отделам</h2>
+    <table border="1" cellpadding="5">
+      <tr><th>Отдел</th><th>Выручка</th></tr>
+      {% for dept in by_department %}
+        <tr>
+          <td>{{ dept.employee__department__name|default:"Без отдела" }}</td>
+          <td>{{ dept.total }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="2">Нет данных</td></tr>
+      {% endfor %}
+    </table>
+  </section>
+
+  <section>
+    <h2>Популярные категории</h2>
+    {% if most_popular_category %}
+      <p>Самый популярный тип товаров: <b>{{ most_popular_category.medication__category__name|default:"Без категории" }}</b></p>
+    {% else %}
+      <p>Данных нет.</p>
+    {% endif %}
+
+    {% if most_profitable_category %}
+      <p>Самый прибыльный тип товаров: <b>{{ most_profitable_category.medication__category__name|default:"Без категории" }}</b></p>
+    {% endif %}
+
+    <table border="1" cellpadding="5">
+      <tr><th>Категория</th><th>Количество продаж</th></tr>
+      {% for cat in popular_categories %}
+        <tr>
+          <td>{{ cat.medication__category__name|default:"Без категории" }}</td>
+          <td>{{ cat.total_count }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="2">Нет данных</td></tr>
+      {% endfor %}
+    </table>
+
+    <table border="1" cellpadding="5" style="margin-top: 15px;">
+      <tr><th>Категория</th><th>Прибыль</th></tr>
+      {% for cat in profitable_categories %}
+        <tr>
+          <td>{{ cat.medication__category__name|default:"Без категории" }}</td>
+          <td>{{ cat.total_profit }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="2">Нет данных</td></tr>
+      {% endfor %}
+    </table>
+  </section>
+
+  <section>
+    <h2>Графики</h2>
+    <div>
+      <h3>Динамика продаж по дням</h3>
+      <img src="data:image/png;base64,{{ graphic }}" alt="график">
+    </div>
+    <div style="margin-top: 20px;">
+      <h3>Распределение выручки по отделам</h3>
+      <img src="data:image/png;base64,{{ graphic2 }}" alt="диаграмма">
+    </div>
+  </section>
+{% else %}
+  <p>У вас нет прав для просмотра этой страницы.</p>
+{% endif %}
+{% endblock %}

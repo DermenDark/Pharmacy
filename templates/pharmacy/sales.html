@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Продажи{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Продажи</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по сотруднику..." class="input">
+
+        <select name="employee">
+            <option value="">Все сотрудники</option>
+            {% for employee in all_employees %}
+                <option value="{{ employee.id }}">{{ employee.name }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="made">
+            <option value="">Все</option>
+            <option value="1">Оформлена</option>
+            <option value="0">Не оформлена</option>
+        </select>
+
+        <input type="date" name="date_from">
+        <input type="date" name="date_to">
+
+        <input type="number" name="min_total" placeholder="Сумма от">
+        <input type="number" name="max_total" placeholder="Сумма до">
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_sale %}
+        <a href="{% url 'sale_create' %}">Создать продажу</a>
+    {% endif %}
+
+    {% for sale in sales %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>ID продажи:</b> {{ sale.id }}
+            </div>
+
+            <div>
+                <b>Сотрудник:</b> {{ sale.employee.name }}
+            </div>
+
+            <div>
+                <b>Общая сумма:</b> {{ sale.total_cost }}
+            </div>
+
+            <div>
+                <b>Статус:</b>
+                {% if sale.made %}
+                    Выполнена
+                {% else %}
+                    Не выполнена
+                {% endif %}
+            </div>
+
+            <div>
+                <b>Дата:</b> {{ sale.sale_date }}
+            </div>
+
+            <div>
+                <b>Позиции:</b>
+                {% for item in sale.items.all %}
+                    <div>
+                        {{ item.medication.name }} — {{ item.count }}
+                    </div>
+                {% empty %}
+                    <div>Нет позиций</div>
+                {% endfor %}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_sale %}
+                    <a href="{% url 'sale_edit' sale.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_sale %}
+                    <a href="{% url 'sale_delete' sale.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет продаж.</div>
+    {% endfor %}
+</div>
+{% endblock %}

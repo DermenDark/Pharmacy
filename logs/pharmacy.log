@@ -1,0 +1,244 @@
+2026-05-21 16:44:47,464 | INFO | pharmacy | Открыт список сотрудников пользователем Vlad
+2026-05-21 16:44:48,796 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:36,888 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:36,910 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:45:50,243 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:50,244 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:45:51,487 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:51,488 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:45:57,994 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:57,996 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:45:59,119 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:59,120 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:45:59,498 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:59,500 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:45:59,721 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:45:59,722 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:12,122 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:12,124 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:12,906 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:12,907 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:17,637 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:17,638 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:18,274 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:18,276 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:18,485 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:18,487 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:18,813 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:18,815 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:19,064 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:19,065 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:34,842 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:34,844 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:35,435 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:35,436 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:35,673 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:35,675 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:35,838 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:35,843 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:46:36,127 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:46:36,129 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:48:33,042 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:48:33,043 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:48:33,580 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:48:33,582 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:48:34,079 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:48:34,080 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:48:34,278 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:48:34,280 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:48:34,435 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:48:34,436 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:48:34,792 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:48:34,794 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:48:34,960 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:48:34,961 | WARNING | pharmacy | Ошибка формы EmployeeForm пользователем Vlad: <ul class="errorlist"><li>phone<ul class="errorlist" id="id_phone_error"><li>Телефон должен быть в формате +375 (29) XXX-XX-XX</li></ul></li></ul>
+2026-05-21 16:50:19,419 | INFO | pharmacy | Открыта форма создания сотрудника пользователем Vlad
+2026-05-21 16:50:19,453 | INFO | pharmacy | Создан объект Employee пользователем Vlad
+2026-05-21 16:50:19,481 | INFO | pharmacy | Открыт список сотрудников пользователем Vlad
+2026-05-21 17:16:50,319 | INFO | pharmacy | Открыт каталог пользователем Vlad
+2026-05-21 17:16:52,789 | INFO | pharmacy | Открыт каталог пользователем Vlad
+2026-05-21 17:31:25,772 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-21 17:32:27,024 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-21 17:32:29,548 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 17:32:30,960 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 21:58:46,647 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:03:19,814 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:03:21,250 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:05:43,364 | INFO | pharmacy | Открыта страница контактов пользователем volodya.shirko@gmail.com
+2026-05-21 22:05:43,995 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:05:59,156 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:06:12,424 | INFO | pharmacy | Открыта страница контактов пользователем volodya.shirko@gmail.com
+2026-05-21 22:06:20,272 | INFO | pharmacy | Открыта страница контактов пользователем volodya.shirko@gmail.com
+2026-05-21 22:06:20,728 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:06:21,562 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:06:31,938 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:06:49,371 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:07:58,501 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:07:59,451 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:09:11,401 | INFO | pharmacy | Открыта страница контактов пользователем volodya.shirko@gmail.com
+2026-05-21 22:09:12,044 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:09:24,213 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:09:28,219 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:09:45,383 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:10:36,779 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:11:15,913 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:13:13,952 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:14:47,004 | INFO | pharmacy | Открыта страница контактов пользователем AnonymousUser
+2026-05-21 22:14:47,649 | INFO | pharmacy | Открыта страница вакансий пользователем AnonymousUser
+2026-05-21 22:14:49,170 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:14:50,889 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:15:49,829 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:15:50,894 | INFO | pharmacy | Открыта страница вакансий пользователем AnonymousUser
+2026-05-21 22:15:51,856 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:15:53,408 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:17:52,790 | INFO | pharmacy | Открыта страница контактов пользователем AnonymousUser
+2026-05-21 22:17:54,011 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:17:55,154 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:18:10,376 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:18:11,035 | INFO | pharmacy | Открыта страница вакансий пользователем AnonymousUser
+2026-05-21 22:18:12,069 | INFO | pharmacy | Открыта страница промокодов пользователем AnonymousUser
+2026-05-21 22:18:12,803 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:18:14,066 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:19:19,638 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:19:20,951 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:19:29,031 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:19:30,489 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:19:41,663 | INFO | pharmacy | Открыта страница промокодов пользователем AnonymousUser
+2026-05-21 22:19:42,413 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:19:43,838 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:21:13,669 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:21:14,524 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-21 22:21:16,234 | INFO | pharmacy | Открыт каталог пользователем volodya.shirko@gmail.com
+2026-05-21 22:21:30,597 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:21:45,722 | INFO | pharmacy | Успешный вход пользователя Vlad
+2026-05-21 22:21:52,260 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:22:03,685 | INFO | pharmacy | Изменены группы пользователя volodya.shirko@gmail.com: ['employees']
+2026-05-21 22:22:03,695 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:22:06,573 | INFO | pharmacy | Изменены группы пользователя Vlados: ['employees']
+2026-05-21 22:22:06,578 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:22:08,495 | INFO | pharmacy | Изменены группы пользователя Vlados: ['clients', 'employees']
+2026-05-21 22:22:08,499 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:22:10,672 | INFO | pharmacy | Изменены группы пользователя Vlados: ['employees']
+2026-05-21 22:22:10,680 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:22:20,102 | INFO | pharmacy | Изменены группы пользователя Vlados: ['clients']
+2026-05-21 22:22:20,108 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:22:25,449 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:22:26,918 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:22:30,713 | INFO | pharmacy | Открыт список продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:31,774 | INFO | pharmacy | Открыт список позиций продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:32,438 | INFO | pharmacy | Открыт список позиций продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:33,440 | INFO | pharmacy | Открыт список позиций продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:33,986 | INFO | pharmacy | Открыт список льгот пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:34,739 | INFO | pharmacy | Открыт список поставщиков пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:35,615 | INFO | pharmacy | Открыт список купонов пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:37,042 | INFO | pharmacy | Открыт список вакансий пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:37,490 | INFO | pharmacy | Открыт список сотрудников пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:39,154 | INFO | pharmacy | Открыт каталог пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:39,672 | INFO | pharmacy | Открыт список категорий медикаментов пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:40,403 | INFO | pharmacy | Открыт каталог пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:41,446 | INFO | pharmacy | Открыт список продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:42,351 | INFO | pharmacy | Открыт список позиций продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:22:43,222 | INFO | pharmacy | Открыт список позиций продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:37:56,114 | INFO | pharmacy | Открыт список позиций продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:38:06,609 | INFO | pharmacy | Открыт список продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:38:18,842 | INFO | pharmacy | Открыт список позиций продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:38:26,840 | INFO | pharmacy | Открыт список продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:38:56,176 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:38:58,769 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:39:08,237 | INFO | pharmacy | Открыт список продаж пользователем volodya.shirko@gmail.com
+2026-05-21 22:39:12,886 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:39:28,698 | WARNING | pharmacy | Ошибка формы входа у пользователя AnonymousUser
+2026-05-21 22:39:28,698 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:40:14,490 | WARNING | pharmacy | Ошибка формы регистрации у пользователя AnonymousUser: <ul class="errorlist"><li>username<ul class="errorlist" id="id_username_error"><li>A user with that username already exists.</li></ul></li><li>birth_date<ul class="errorlist" id="id_birth_date_error"><li>Вам должно быть не менее 18 лет.</li></ul></li></ul>
+2026-05-21 22:40:14,492 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:40:20,791 | WARNING | pharmacy | Ошибка формы входа у пользователя AnonymousUser
+2026-05-21 22:40:20,792 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:40:33,658 | INFO | pharmacy | Успешный вход пользователя Vlad
+2026-05-21 22:40:37,683 | INFO | pharmacy | Открыта страница вакансий пользователем Vlad
+2026-05-21 22:40:42,448 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:40:50,536 | INFO | pharmacy | Изменены группы пользователя volodya.shirko@gmail.com: ['clients', 'employees']
+2026-05-21 22:40:50,540 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 22:40:56,511 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:40:57,777 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:49:46,417 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:49:49,271 | INFO | pharmacy | Успешный вход пользователя volodya.shirko@gmail.com
+2026-05-21 22:49:56,386 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-21 22:50:06,918 | INFO | pharmacy | Успешный вход пользователя Vlad
+2026-05-21 23:11:20,910 | INFO | pharmacy | Открыт список продаж пользователем Vlad
+2026-05-21 23:11:24,094 | INFO | pharmacy | Открыт список продаж пользователем Vlad
+2026-05-21 23:11:24,979 | INFO | pharmacy | Открыт список позиций продаж пользователем Vlad
+2026-05-21 23:11:25,679 | INFO | pharmacy | Открыт список продаж пользователем Vlad
+2026-05-21 23:11:33,806 | INFO | pharmacy | Открыт каталог пользователем Vlad
+2026-05-21 23:11:39,687 | INFO | pharmacy | Открыт список купонов пользователем Vlad
+2026-05-21 23:11:44,124 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-21 23:12:03,192 | INFO | pharmacy | Открыт список продаж пользователем Vlad
+2026-05-21 23:12:06,158 | INFO | pharmacy | Открыт список позиций продаж пользователем Vlad
+2026-05-21 23:12:07,750 | INFO | pharmacy | Открыт список продаж пользователем Vlad
+2026-05-21 23:12:08,983 | INFO | pharmacy | Открыта форма редактирования продажи id=4 пользователем Vlad
+2026-05-21 23:12:10,945 | INFO | pharmacy | Открыта форма редактирования продажи id=4 пользователем Vlad
+2026-05-21 23:12:10,950 | INFO | pharmacy | Изменен объект Sale id=4 пользователем Vlad
+2026-05-21 23:12:10,960 | INFO | pharmacy | Открыт список продаж пользователем Vlad
+2026-05-21 23:13:00,278 | INFO | pharmacy | Открыт каталог пользователем Vlad
+2026-05-22 00:04:25,924 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-22 00:04:29,605 | INFO | pharmacy | Открыта страница контактов пользователем AnonymousUser
+2026-05-22 00:04:33,055 | INFO | pharmacy | Открыта страница промокодов пользователем AnonymousUser
+2026-05-22 00:04:36,407 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:37,678 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:44,041 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:44,486 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:44,899 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:45,350 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:47,206 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:47,671 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:48,436 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:49,180 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:50,154 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:51,333 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:53,199 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:04:58,479 | INFO | pharmacy | Открыт каталог пользователем AnonymousUser
+2026-05-22 00:05:00,724 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-22 00:05:01,918 | WARNING | pharmacy | Ошибка формы входа у пользователя AnonymousUser
+2026-05-22 00:05:01,918 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-22 00:05:04,661 | WARNING | pharmacy | Ошибка формы входа у пользователя AnonymousUser
+2026-05-22 00:05:04,661 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-22 00:05:22,473 | INFO | pharmacy | Успешная регистрация пользователя volodya.shirko@gmail.com
+2026-05-22 00:05:27,989 | INFO | pharmacy | Открыта страница вакансий пользователем volodya.shirko@gmail.com
+2026-05-22 00:05:29,346 | INFO | pharmacy | Открыта страница промокодов пользователем volodya.shirko@gmail.com
+2026-05-22 00:05:30,005 | INFO | pharmacy | Открыта страница контактов пользователем volodya.shirko@gmail.com
+2026-05-22 00:05:32,340 | INFO | pharmacy | Открыт каталог пользователем volodya.shirko@gmail.com
+2026-05-22 00:05:34,252 | INFO | pharmacy | Открыт список категорий медикаментов пользователем volodya.shirko@gmail.com
+2026-05-22 00:08:14,345 | INFO | pharmacy | Открыт список позиций продаж пользователем Vlad
+2026-05-22 00:08:14,885 | INFO | pharmacy | Открыт список продаж пользователем Vlad
+2026-05-22 00:08:19,678 | INFO | pharmacy | Открыт каталог пользователем Vlad
+2026-05-22 00:32:31,877 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:32:47,372 | INFO | pharmacy | Изменены группы пользователя volodya.shirko@gmail.com: ['clients', 'employees']
+2026-05-22 00:32:47,377 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:32:51,389 | INFO | pharmacy | Изменены группы пользователя user10: ['clients']
+2026-05-22 00:32:51,402 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:32:53,381 | INFO | pharmacy | Изменены группы пользователя user02: ['clients']
+2026-05-22 00:32:53,387 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:32:54,822 | INFO | pharmacy | Изменены группы пользователя user03: ['clients']
+2026-05-22 00:32:54,838 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:32:56,443 | INFO | pharmacy | Изменены группы пользователя user04: ['clients', 'employees']
+2026-05-22 00:32:56,451 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:32:58,521 | INFO | pharmacy | Изменены группы пользователя user05: ['clients', 'employees']
+2026-05-22 00:32:58,528 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:33:00,282 | INFO | pharmacy | Изменены группы пользователя user06: ['employees']
+2026-05-22 00:33:00,290 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:33:02,966 | INFO | pharmacy | Изменены группы пользователя user07: ['clients']
+2026-05-22 00:33:02,974 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:33:06,348 | INFO | pharmacy | Изменены группы пользователя user08: ['clients', 'employees']
+2026-05-22 00:33:06,356 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:33:09,270 | INFO | pharmacy | Изменены группы пользователя user09: ['clients']
+2026-05-22 00:33:09,276 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:33:11,997 | INFO | pharmacy | Изменены группы пользователя user08: ['employees']
+2026-05-22 00:33:12,007 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:37:15,030 | INFO | pharmacy | Изменены группы пользователя volodya.shirko@gmail.com: ['clients', 'employees']
+2026-05-22 00:37:15,052 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad
+2026-05-22 00:37:20,814 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-22 00:37:45,872 | INFO | pharmacy | Успешная регистрация пользователя вукф
+2026-05-22 00:37:51,841 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-22 00:37:59,066 | WARNING | pharmacy | Ошибка формы входа у пользователя AnonymousUser
+2026-05-22 00:37:59,066 | INFO | pharmacy | Открыта страница входа/регистрации пользователем AnonymousUser
+2026-05-22 00:38:03,987 | INFO | pharmacy | Успешный вход пользователя Vlad
+2026-05-22 00:38:09,496 | INFO | pharmacy | Открыта страница управления пользователями пользователем Vlad

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<div>
+    <h2>Контакты</h2>
+
+    {% if perms.pharmacy.add_employee %}
+        <div style="margin-bottom: 10px;">
+            <a href="{% url 'employee_create' %}">Добавить сотрудника</a>
+        </div>
+    {% endif %}
+
+    {% for info in employee %}
+        <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+
+            <div><b>Имя:</b> {{ info.name }}</div>
+
+            {% load static %}
+
+            {% if info.photo %}
+                <div>
+                    <img src="{{ employee.photo.url }}" alt="{{ info.name }}" style="max-width: 120px;">
+                </div>
+            {% else %}
+                <div>
+                    <img src="{% static 'employees/image_for_project/def_ju59XtB.webp' %}"
+                        alt="{{ info.name }}"
+                        style="max-width: 120px;">
+                </div>
+            {% endif %}
+
+            <div>
+                <b>Описание:</b>
+                <p>{{ info.description }}</p>
+            </div>
+
+            <div>
+                <b>Номер телефона:</b>
+                <p>{{ info.phone }}</p>
+            </div>
+
+            <div style="margin-top: 5px;">
+
+                {% if perms.pharmacy.change_employee %}
+                    <a href="{% url 'employee_edit' info.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_employee %}
+                    <a href="{% url 'employee_delete' info.id %}">Удалить</a>
+                {% endif %}
+
+            </div>
+
+        </div>
+    {% empty %}
+        <div>Контактная информация пока не добавлена.</div>
+    {% endfor %}
+</div>
+{% endblock %}

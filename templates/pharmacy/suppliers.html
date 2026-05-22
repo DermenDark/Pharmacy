@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Поставщики{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Поставщики</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по названию..." class="input">
+
+        <select name="medication">
+            <option value="">Все медикаменты</option>
+            {% for medic in all_medications %}
+                <option value="{{ medic.id }}">{{ medic.name }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_supplier %}
+        <a href="{% url 'supplier_create' %}">Создать поставщика</a>
+    {% endif %}
+
+    {% for supplier in suppliers %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>Название:</b> {{ supplier.name }}
+            </div>
+
+            <div>
+                <b>Медикаменты:</b>
+                {% for medic in supplier.medications.all %}
+                    {{ medic.name }}{% if not forloop.last %}, {% endif %}
+                {% empty %}
+                    Нет медикаментов
+                {% endfor %}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_supplier %}
+                    <a href="{% url 'supplier_edit' supplier.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_supplier %}
+                    <a href="{% url 'supplier_delete' supplier.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет поставщиков.</div>
+    {% endfor %}
+</div>
+{% endblock %}

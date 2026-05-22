@@ -1,0 +1,9 @@
+<h1>Удаление</h1>
+
+<p>Вы действительно хотите удалить объект "{{ object }}"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Удалить</button>
+    <a href="{% url 'catalog' %}">Отмена</a>
+</form>

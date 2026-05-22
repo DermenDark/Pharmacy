@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Заказы на обработку{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Заказы на обработку</h1>
+
+    {% if orders %}
+        {% for order in orders %}
+            <section>
+                <h2>Заказ #{{ order.id }}</h2>
+                <p><strong>Пользователь:</strong> {{ order.user.username }}</p>
+                <p><strong>Дата:</strong> {{ order.created_at }}</p>
+                <p><strong>Сумма:</strong> {{ order.total_cost }}</p>
+
+                <h3>Товары</h3>
+                <ul>
+                    {% for item in order.items.all %}
+                        <li>{{ item.medication.name }} — {{ item.quantity }} шт.</li>
+                    {% empty %}
+                        <li>Позиции отсутствуют</li>
+                    {% endfor %}
+                </ul>
+
+                <p>
+                    <a href="{% url 'shop:order_detail' order.id %}">Открыть</a>
+                </p>
+
+                <form method="post" action="{% url 'shop:approve_order' order.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Одобрить</button>
+                </form>
+            </section>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>Новых заказов нет.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Новости</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по заголовку..." class="input">
+
+        <select name="is_published">
+            <option value="">Все</option>
+            <option value="1">Опубликованные</option>
+            <option value="0">Не опубликованные</option>
+        </select>
+
+        <input type="date" name="date_from">
+        <input type="date" name="date_to">
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_news %}
+        <a href="{% url 'news_create' %}">Создать новость</a>
+    {% endif %}
+
+    {% for item in news %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.short_content }}</p>
+
+            {% if item.image %}
+                <div>
+                    <img src="{{ item.image.url }}" alt="{{ item.title }}" style="max-width: 250px;">
+                </div>
+            {% endif %}
+
+            <p><small>{{ item.created_at }}</small></p>
+
+            <a href="{% url 'news_detail' item.id %}">Подробнее</a>
+
+            {% if perms.pharmacy.change_news %}
+                <a href="{% url 'news_edit' item.id %}">Редактировать</a>
+            {% endif %}
+
+            {% if perms.pharmacy.delete_news %}
+                <a href="{% url 'news_delete' item.id %}">Удалить</a>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>Новостей пока нет.</p>
+    {% endfor %}
+</div>
+{% endblock %}

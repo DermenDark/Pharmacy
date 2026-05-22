@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Позиции продаж{% endblock %}
+
+{% block content %}
+    <h1>Позиции продаж</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по медикаменту..." class="input">
+
+        <select name="sale">
+            <option value="">Все продажи</option>
+            {% for sale in all_sales %}
+                <option value="{{ sale.id }}">Sale #{{ sale.id }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="medication">
+            <option value="">Все медикаменты</option>
+            {% for medic in all_medications %}
+                <option value="{{ medic.id }}">{{ medic.name }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="number" name="min_count" placeholder="Количество от">
+        <input type="number" name="max_count" placeholder="Количество до">
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_saleitem %}
+        <a href="{% url 'saleitem_create' %}">Создать</a>
+    {% endif %}
+
+    {% for item in saleitems %}
+        <div>
+            <h3>{{ item.medication.name }}</h3>
+
+            <p>Продажа №{{ item.sale.id }}</p>
+            <p>Количество: {{ item.count }}</p>
+
+            <div>
+                {% if perms.pharmacy.change_saleitem %}
+                    <a href="{% url 'saleitem_edit' item.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_saleitem %}
+                    <a href="{% url 'saleitem_delete' item.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <p>Нет позиций продаж</p>
+    {% endfor %}
+    
+{% endblock %}

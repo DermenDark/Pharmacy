@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+<body>
+    <h1>Редактировать медикамент</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <input type="text" name="name" value="{{ medic.name }}" required>
+        <br><br>
+
+        <select name="category" required>
+            {% for c in categories %}
+                <option value="{{ c.id }}"
+                    {% if medic.category.id == c.id %}selected{% endif %}>
+                    {{ c.name }}
+                </option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <textarea name="description">{{ medic.description }}</textarea>
+        <br><br>
+
+        <input type="number" step="0.01" name="cost" value="{{ medic.cost }}">
+        <br><br>
+
+        <input type="number" name="count" value="{{ medic.count }}">
+        <br><br>
+
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

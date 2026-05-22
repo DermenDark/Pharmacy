@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Департаменты{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Отделы</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по названию отдела..." class="input">
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_department %}
+        <a href="{% url 'department_create' %}">Создать отдел</a>
+    {% endif %}
+
+    {% for department in departments %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>Название:</b> {{ department.name }}
+            </div>
+
+            <div>
+                <b>Сотрудников:</b> {{ department.employees.count }}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_department %}
+                    <a href="{% url 'department_edit' department.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_department %}
+                    <a href="{% url 'department_delete' department.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет отделов.</div>
+    {% endfor %}
+</div>
+{% endblock %}

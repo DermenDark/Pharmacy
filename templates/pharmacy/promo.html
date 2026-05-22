@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Акции{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Льготы</h1>
+
+    {% if perms.pharmacy.add_benefits %}
+        <a href="{% url 'benefits_create' %}">Создать льготу</a>
+    {% endif %}
+
+    {% for benefit in benefits %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>Название:</b> {{ benefit.name }}
+            </div>
+
+            <div>
+                Минимальный возраст:{{ benefit.min_age }}
+            </div>
+
+            <div>
+                Пенсионер:
+                {% if benefit.is_pensioner %}Да{% else %}Нет{% endif %}
+            </div>
+
+            <div>
+                Инвалидность:
+                {% if benefit.is_disability %}Да{% else %}Нет{% endif %}
+            </div>
+
+            <div>
+                Скидка:{{ benefit.discount_percent }}%
+            </div>
+
+            <div>
+                Сумма скидки: {{ benefit.discount_cost }}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_benefits %}
+                    <a href="{% url 'benefits_edit' benefit.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_benefits %}
+                    <a href="{% url 'benefits_delete' benefit.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет льгот.</div>
+    {% endfor %}
+</div>
+<div>
+    <h1>Купоны</h1>
+
+    {% if perms.pharmacy.add_coupons %}
+        <a href="{% url 'coupons_create' %}">Создать купон</a>
+    {% endif %}
+
+    {% for coupon in coupons %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>Скидка:</b> {{ coupon.discount_percent }}%
+            </div>
+
+            <div>
+                <b>Сумма скидки:</b> {{ coupon.discount_cost }}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_coupons %}
+                    <a href="{% url 'coupons_edit' coupon.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_coupons %}
+                    <a href="{% url 'coupons_delete' coupon.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет купонов.</div>
+    {% endfor %}
+</div>
+{% endblock %}

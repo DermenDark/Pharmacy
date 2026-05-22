@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Сотрудники{% endblock %}
+{% block content %}
+<div>
+    <h1>Сотрудники</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по имени..." class="input">
+
+        <select name="department">
+            <option value="">Все отделы</option>
+            {% for department in all_departments %}
+                <option value="{{ department.id }}">{{ department.name }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_employee %}
+        <a href="{% url 'employee_create' %}">Создать сотрудника</a>
+    {% endif %}
+
+    {% for employee in employees %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            {% load static %}
+
+            {% if employee.photo %}
+                <div>
+                    <img src="{{ employee.photo.url }}" alt="{{ employee.name }}" style="max-width: 120px;">
+                </div>
+            {% else %}
+                <div>
+                    <img src="{% static 'employees/image_for_project/def_ju59XtB.webp' %}"
+                        alt="{{ employee.name }}"
+                        style="max-width: 120px;">
+                </div>
+            {% endif %}
+
+            <div>
+                <b>Имя:</b> {{ employee.name }}
+            </div>
+
+            <div>
+                <b>Отдел:</b> {{ employee.department.name }}
+            </div>
+
+            <div>
+                <b>Телефон:</b> {{ employee.phone }}
+            </div>
+
+            <div>
+                <b>Почта:</b> {{ employee.email }}
+            </div>
+
+            <div>
+                {% if employee.description %}
+                    <b>Описание:</b> {{ employee.description }}
+                {% endif %}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_employee %}
+                    <a href="{% url 'employee_edit' employee.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_employee %}
+                    <a href="{% url 'employee_delete' employee.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет сотрудников.</div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}Отзывы{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Отзывы</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск по имени..." class="input">
+
+        <select name="rating">
+            <option value="">Любая оценка</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+
+        <select name="is_published">
+            <option value="">Все</option>
+            <option value="1">Опубликованные</option>
+            <option value="0">Не опубликованные</option>
+        </select>
+
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if user.is_authenticated %}
+        {% if perms.info.add_review %}
+            <a href="{% url 'review_create' %}">Добавить отзыв</a>
+        {% endif %}
+    {% else %}
+        <div style="margin: 15px 0;">
+            <a href="{% url 'login_view' %}" style="padding:8px 15px; text-decoration:none; border-radius:3px; margin-right:10px;">
+                Добавить отзыв
+            </a>
+        </div>
+    {% endif %}
+
+    {% for item in reviews %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <h3>{{ item.name }}</h3>
+            <p>Оценка: {{ item.rating }}/5</p>
+            <p>{{ item.text }}</p>
+            <p><small>{{ item.created_at }}</small></p>
+
+            {% if perms.pharmacy.change_review %}
+                <a href="{% url 'review_edit' item.id %}">Редактировать</a>
+            {% endif %}
+
+            {% if perms.pharmacy.delete_review %}
+                <a href="{% url 'review_delete' item.id %}">Удалить</a>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>Отзывы пока не добавлены.</p>
+    {% endfor %}
+</div>
+{% endblock %}

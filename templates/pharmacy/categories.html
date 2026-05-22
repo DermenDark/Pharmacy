@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Категории{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Категории лекарств</h1>
+
+    <form method="get">
+        <input type="text" name="q" placeholder="Поиск..." class="input">
+        <button type="submit">Поиск</button>
+    </form>
+
+    {% if perms.pharmacy.add_categorymedication %}
+        <a href="{% url 'category_create' %}">Создать категорию</a>
+    {% endif %}
+
+    {% for category in categories %}
+        <div style="margin-top: 15px; padding: 10px; border: 1px solid #ccc;">
+            <div>
+                <b>Название:</b> {{ category.name }}
+            </div>
+
+            <div>
+                <b>Медикаментов:</b> {{ category.medications.count }}
+            </div>
+
+            <div>
+                {% if perms.pharmacy.change_categorymedication %}
+                    <a href="{% url 'category_edit' category.id %}">Редактировать</a>
+                {% endif %}
+
+                {% if perms.pharmacy.delete_categorymedication %}
+                    <a href="{% url 'category_delete' category.id %}">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    {% empty %}
+        <div>Нет категорий.</div>
+    {% endfor %}
+</div>
+{% endblock %}
